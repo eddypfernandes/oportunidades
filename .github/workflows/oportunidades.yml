@@ -1,0 +1,37 @@
+name: Oportunidades
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17,47 * * * *"
+      timezone: "America/Sao_Paulo"
+
+permissions:
+  contents: write
+
+jobs:
+  oportunidades:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Executar coleta
+        run: node scripts/oportunidades.js
+
+      - name: Publicar JSON
+        run: |
+          git config user.name "GUIA COMERCIAL"
+          git config user.email "guia-comercial-bot@users.noreply.github.com"
+          git add data/oportunidades.json
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteração nas oportunidades."
+          else
+            git commit -m "Atualizar oportunidades de emprego"
+            git push
+          fi
