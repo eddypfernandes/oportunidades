@@ -114,13 +114,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    const URL_DADOS = "https://raw.githubusercontent.com/eddypfernandes/oportunidades/main/data/oportunidades.json";
-    const exemplos = [
-      { titulo: "Assistente administrativo", empresa: "Empresa demonstrativa", localidade: "Núcleo Bandeirante", localidades: ["Núcleo Bandeirante"], resumo: "Exemplo de cartão para visualizar o fluxo do módulo.", publicado_em: "", url: "", fonte: "Demonstração", demonstrativo: true },
-      { titulo: "Atendente de loja", empresa: "Comércio demonstrativo", localidade: "Guará", localidades: ["Guará"], resumo: "Os campos serão preenchidos conforme os dados encontrados na fonte.", publicado_em: "", url: "", fonte: "Demonstração", demonstrativo: true },
-      { titulo: "Auxiliar de serviços gerais", empresa: "Organização demonstrativa", localidade: "Candangolândia", localidades: ["Candangolândia"], resumo: "Exemplo visual; não representa uma vaga real aberta.", publicado_em: "", url: "", fonte: "Demonstração", demonstrativo: true }
-    ];
-
+    const URL_DADOS = "https://raw.githubusercontent.com/eddypfernandes/oportunidades/main/data/oportunidades.json?cache=" + Date.now();
     function textoSeguro(valor, fallback = "Não informado") {
       return String(valor || fallback).replace(/[&<>"']/g, caractere => ({
         "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -159,12 +153,15 @@
 
     function oportunidadeAtual(vaga) {
       const dias = diasDesdePublicacao(vaga);
-      if (dias === null || dias < 0) return false;
-      const concurso = /concurso|edital|processo seletivo|selecao publica/i.test(vaga.titulo || "");
-      return dias <= (concurso ? 30 : 7);
+      if (dias !== null) {
+        if (dias < 0) return false;
+        const concurso = /concurso|edital|processo seletivo|selecao publica/i.test(vaga.titulo || "");
+        return dias <= (concurso ? 30 : 7);
+      }
+      return /carreiras\.iel\.org\.br\/DF\/vaga\//i.test(vaga.url || "");
     }
 
-    function renderizar(vagas, demonstrativo) {
+    function renderizar(vagas) {
       const slides = document.getElementById("vagasSlides");
       const indicadores = document.getElementById("vagasIndicadores");
       slides.innerHTML = "";
@@ -173,13 +170,13 @@
       vagas.forEach((vaga, indice) => {
         const slide = document.createElement("div");
         slide.className = "carousel-item" + (indice === 0 ? " active" : "");
-        const detalhe = "oportunidade.html?i=" + indice + (demonstrativo ? "&demo=1" : "");
+        const detalhe = "oportunidade.html?url=" + encodeURIComponent(vaga.url || "");
         slide.innerHTML = `
           <article class="card gc-card shadow-sm h-100">
             <div class="card-body p-4 p-xl-5 d-flex flex-column">
               <div class="d-flex flex-wrap gap-2 mb-3">
-                ${demonstrativo ? '<span class="badge text-bg-warning">Exemplo demonstrativo</span>' : '<span class="badge text-bg-success">Oportunidade publicada</span>'}
-                ${vaga.publicado_em ? '<span class="badge text-bg-light border">' + exibir(vaga.publicado_em) + '</span>' : ''}
+                <span class="badge text-bg-success">Registro encontrado na fonte</span>
+                ${vaga.publicado_em ? '<span class="badge text-bg-light border">' + exibir(vaga.publicado_em) + '</span>' : '<span class="badge text-bg-warning">Data não informada</span>'}
               </div>
               <h3 class="card-title h4 fw-bold mb-3">${exibir(vaga.titulo, "Oportunidade")}</h3>
               <p class="fw-semibold mb-2">${exibir(vaga.empresa, "Empresa não informada")}</p>
@@ -209,9 +206,9 @@
 
       document.getElementById("vagasCarousel").classList.remove("d-none");
       document.getElementById("mensagemDados").classList.add("d-none");
-      document.getElementById("avisoDemo").classList.toggle("d-none", !demonstrativo);
-      document.getElementById("statusDados").className = demonstrativo ? "badge text-bg-warning" : "badge text-bg-success";
-      document.getElementById("statusDados").textContent = demonstrativo ? "Modo demonstrativo" : vagas.length + " oportunidade(s) carregada(s)";
+      document.getElementById("avisoDemo").classList.add("d-none");
+      document.getElementById("statusDados").className = "badge text-bg-success";
+      document.getElementById("statusDados").textContent = vagas.length + " oportunidade(s) carregada(s)";
     }
 
     async function carregarOportunidades() {
@@ -222,7 +219,7 @@
         const todas = Array.isArray(dados.items) ? dados.items : [];
         const vagas = todas.filter(oportunidadeAtual);
         if (vagas.length) {
-          renderizar(vagas, false);
+          renderizar(vagas);
         } else {
           document.getElementById("vagasCarousel").classList.add("d-none");
           document.getElementById("mensagemDados").classList.remove("d-none");
