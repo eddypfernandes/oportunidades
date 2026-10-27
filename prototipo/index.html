@@ -150,6 +150,20 @@
       return unicas.length ? unicas.join(" · ") : "Distrito Federal";
     }
 
+    function diasDesdePublicacao(vaga) {
+      if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(String(vaga.publicado_em || ""))) return null;
+      const data = new Date(vaga.publicado_em + "T00:00:00");
+      if (Number.isNaN(data.getTime())) return null;
+      return Math.floor((new Date().setHours(0, 0, 0, 0) - data.getTime()) / 86400000);
+    }
+
+    function oportunidadeAtual(vaga) {
+      const dias = diasDesdePublicacao(vaga);
+      if (dias === null || dias < 0) return false;
+      const concurso = /concurso|edital|processo seletivo|selecao publica/i.test(vaga.titulo || "");
+      return dias <= (concurso ? 30 : 7);
+    }
+
     function renderizar(vagas, demonstrativo) {
       const slides = document.getElementById("vagasSlides");
       const indicadores = document.getElementById("vagasIndicadores");
@@ -205,10 +219,12 @@
         const resposta = await fetch(URL_DADOS, { cache: "no-store" });
         if (!resposta.ok) throw new Error("JSON indisponível");
         const dados = await resposta.json();
-        const vagas = Array.isArray(dados.items) ? dados.items : [];
+        const todas = Array.isArray(dados.items) ? dados.items : [];
+        const vagas = todas.filter(oportunidadeAtual);
         if (vagas.length) {
           renderizar(vagas, false);
         } else {
+          document.getElementById("mensagemDados").textContent = "Não há oportunidades com data de publicação confirmada dentro do prazo de exibição.";
           renderizar(exemplos, true);
         }
       } catch (erro) {
