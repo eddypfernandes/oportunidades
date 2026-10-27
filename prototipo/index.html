@@ -151,7 +151,7 @@
     }
 
     function diasDesdePublicacao(vaga) {
-      if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(String(vaga.publicado_em || ""))) return null;
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(String(vaga.publicado_em || ""))) return null;
       const data = new Date(vaga.publicado_em + "T00:00:00");
       if (Number.isNaN(data.getTime())) return null;
       return Math.floor((new Date().setHours(0, 0, 0, 0) - data.getTime()) / 86400000);
@@ -224,12 +224,22 @@
         if (vagas.length) {
           renderizar(vagas, false);
         } else {
-          document.getElementById("mensagemDados").textContent = "Não há oportunidades com data de publicação confirmada dentro do prazo de exibição.";
-          renderizar(exemplos, true);
+          document.getElementById("vagasCarousel").classList.add("d-none");
+          document.getElementById("mensagemDados").classList.remove("d-none");
+          document.getElementById("mensagemDados").textContent = todas.length
+            ? "Nenhuma oportunidade possui data de publicação confirmada dentro do prazo de exibição. Nenhum exemplo demonstrativo será exibido como vaga real."
+            : "O repositório ainda não contém oportunidades reais para exibir.";
+          document.getElementById("statusDados").className = "badge text-bg-secondary";
+          document.getElementById("statusDados").textContent = "Sem oportunidades atuais";
+          document.getElementById("avisoDemo").classList.add("d-none");
         }
       } catch (erro) {
-        renderizar(exemplos, true);
-        document.getElementById("statusDados").textContent = "JSON indisponível · demonstração";
+        document.getElementById("vagasCarousel").classList.add("d-none");
+        document.getElementById("mensagemDados").classList.remove("d-none");
+        document.getElementById("mensagemDados").textContent = "Não foi possível carregar as oportunidades reais. Tente novamente mais tarde.";
+        document.getElementById("statusDados").className = "badge text-bg-danger";
+        document.getElementById("statusDados").textContent = "Falha ao carregar dados";
+        document.getElementById("avisoDemo").classList.add("d-none");
       }
     }
 
