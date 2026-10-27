@@ -81,13 +81,7 @@
   </footer>
 
   <script>
-    const URL_DADOS = "https://raw.githubusercontent.com/eddypfernandes/oportunidades/main/data/oportunidades.json";
-    const exemplos = [
-      { titulo: "Assistente administrativo", empresa: "Empresa demonstrativa", localidade: "Núcleo Bandeirante", resumo: "Este é um exemplo visual para validar a página de detalhes. Não representa uma vaga real.", publicado_em: "", url: "", fonte: "Demonstração", demonstrativo: true },
-      { titulo: "Atendente de loja", empresa: "Comércio demonstrativo", localidade: "Guará", resumo: "Os dados reais serão apresentados aqui quando estiverem disponíveis no JSON de oportunidades.", publicado_em: "", url: "", fonte: "Demonstração", demonstrativo: true },
-      { titulo: "Auxiliar de serviços gerais", empresa: "Organização demonstrativa", localidade: "Candangolândia", resumo: "Exemplo de conteúdo; não representa uma vaga real aberta.", publicado_em: "", url: "", fonte: "Demonstração", demonstrativo: true }
-    ];
-
+    const URL_DADOS = "https://raw.githubusercontent.com/eddypfernandes/oportunidades/main/data/oportunidades.json?cache=" + Date.now();
     function diasDesdePublicacao(vaga) {
       if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(String(vaga.publicado_em || ""))) return null;
       const data = new Date(vaga.publicado_em + "T00:00:00");
@@ -107,7 +101,7 @@
 
     async function carregarDetalhe() {
       const parametros = new URLSearchParams(window.location.search);
-      const indice = Number.parseInt(parametros.get("i") || "0", 10);
+      const urlSelecionada = parametros.get("url") || "";
       const aviso = document.getElementById("aviso");
 
       try {
@@ -115,8 +109,7 @@
         if (!resposta.ok) throw new Error("JSON indisponível");
         const dados = await resposta.json();
         const todas = Array.isArray(dados.items) ? dados.items : [];
-        const vagas = todas.filter(oportunidadeAtual);
-        const vaga = vagas[indice];
+        const vaga = todas.find(item => item.url === urlSelecionada && (oportunidadeAtual(item) || !item.publicado_em));
 
         if (!vaga) {
           document.getElementById("titulo").textContent = "Oportunidade indisponível";
@@ -148,10 +141,10 @@
           descricao.appendChild(p);
         });
 
-        mostrarTexto("dataPublicacao", vaga.publicado_em);
+        mostrarTexto("dataPublicacao", vaga.publicado_em, "Data não informada");
         mostrarTexto("fonte", vaga.fonte);
         document.getElementById("selo").className = "badge text-bg-success";
-        document.getElementById("selo").textContent = "Dados do repositório";
+        document.getElementById("selo").textContent = vaga.publicado_em ? "Data registrada no repositório" : "Data não informada";
 
         if (vaga.url && /^https?:\\/\\//i.test(vaga.url)) {
           const link = document.getElementById("linkOriginal");
