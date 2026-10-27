@@ -1,31 +1,31 @@
 # Oportunidades — GUIA COMERCIAL
 
-Módulo de coleta e publicação de vagas de emprego para o GUIA COMERCIAL, seguindo a arquitetura de automação do repositório [radar-ticker](https://github.com/eddypfernandes/radar-ticker).
+Módulo experimental de oportunidades de emprego para o GUIA COMERCIAL.
 
-## Objetivo
+## Protótipo navegável
 
-- Coletar oportunidades de fontes públicas configuradas.
-- Publicar somente vagas cuja localidade corresponda a uma entrada de `localidades.txt`.
-- Evitar duplicidades e preservar o link direto para a vaga original.
-- Gerar um JSON para consumo pelo site.
-- Permitir exibir chamadas resumidas na home e uma página com detalhes e link de candidatura externo.
+- Página inicial com carrossel de cartões: `prototipo/index.html`
+- Página de detalhes: `prototipo/oportunidade.html`
+- Os cartões consultam `data/oportunidades.json` diretamente do repositório.
+- Se o JSON estiver vazio ou indisponível, são exibidos exemplos genéricos claramente identificados como demonstração.
+- Para oportunidades reais, a página de detalhes mostra o link para a publicação original quando o item contém uma URL HTTP/HTTPS válida.
 
-## Arquivos
+## Automação de dados
 
-- `localidades.txt`: lista central de regiões permitidas, uma por linha.
-- `config.json`: fontes e parâmetros da coleta.
-- `scripts/oportunidades.js`: coleta, validação e geração do JSON.
-- `data/oportunidades.json`: saída consumida pelo site.
-- `.github/workflows/oportunidades.yml`: execução automática pelo GitHub Actions.
+- `config.json`: regiões, termos geográficos, quantidade máxima e fontes.
+- `scripts/oportunidades.js`: coleta inicial e triagem.
+- `data/oportunidades.json`: dados consumidos pelo protótipo.
+- `.github/workflows/oportunidades.yml`: execução da coleta.
+- `.github/workflows/pages.yml`: publicação do protótipo no GitHub Pages.
 
-## Segredos
+A estrutura geográfica segue a configuração usada pelo repositório [radar-ticker](https://github.com/eddypfernandes/radar-ticker). A lista `termos_ampliados` foi copiada para este repositório, portanto ainda não existe sincronização automática entre os dois arquivos de configuração.
 
-Configure `GEMINI_API_KEY` em **Settings → Secrets and variables → Actions** caso a curadoria com Gemini esteja habilitada.
+## Estado experimental
 
-## Critérios editoriais
+As fontes de vagas permanecem desativadas até a configuração de páginas específicas e a validação da coleta. O JSON está vazio no momento; por isso, o protótipo apresenta exemplos genéricos, não vagas reais.
 
-A localidade do emprego deve ser confirmada no conteúdo da vaga; uma menção incidental a uma região não é suficiente. O link publicado deve apontar para a vaga ou candidatura original, nunca para uma página de busca genérica. A automação não deve inventar vagas, detalhes, datas ou URLs.
+Antes de ativar a coleta, é necessário validar as páginas de origem e melhorar a extração para confirmar a localidade no conteúdo completo da vaga. Não publicar dados inventados, links de busca genéricos ou detalhes não confirmados.
 
-## Estado
+## Publicação do protótipo
 
-Estrutura inicial do repositório. Antes de considerar a automação pronta para produção, validar fontes, formato de `localidades.txt`, campos de saída e execução completa do workflow.
+O workflow `.github/workflows/pages.yml` publica a pasta `prototipo` no GitHub Pages. Se necessário, em **Settings → Pages**, selecione **GitHub Actions** como fonte de publicação. Depois, execute o workflow em **Actions → Publicar protótipo no GitHub Pages → Run workflow**.
