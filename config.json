@@ -48,19 +48,49 @@
     "Brasília",
     "Distrito Federal"
   ],
-  "quantidade": 20,
+  "quantidade": 40,
   "fontes": [
     {
       "nome": "Agência Brasília",
       "url": "https://agenciabrasilia.df.gov.br/",
       "ativo": true,
-      "observacao": "Fonte ativa para teste inicial; o coletor lê artigos completos e só aceita conteúdo com termos de vagas e regiões configuradas."
+      "tipo": "noticias",
+      "observacao": "Notícias oficiais sobre vagas das Agências do Trabalhador do DF."
     },
     {
-      "nome": "Secretaria de Desenvolvimento Econômico, Trabalho e Renda do DF",
-      "url": "https://www.trabalho.df.gov.br/",
+      "nome": "IEL Distrito Federal",
+      "url": "https://carreiras.iel.org.br/DF",
+      "ativo": true,
+      "tipo": "vagas",
+      "observacao": "Estágios, aprendizagem e oportunidades profissionais; páginas individuais são verificadas."
+    },
+    {
+      "nome": "CIEE",
+      "url": "https://portal.ciee.org.br/quero-uma-vaga/estagio/",
+      "ativo": true,
+      "tipo": "vagas",
+      "observacao": "Estágio, aprendizagem, PCD e processos públicos; páginas e localidades são verificadas."
+    },
+    {
+      "nome": "Secretaria de Economia do DF — Concursos",
+      "url": "https://www.economia.df.gov.br/category/gestao-de-pessoas/concursos/",
+      "ativo": true,
+      "tipo": "concursos",
+      "observacao": "Editais e atualizações de concursos públicos distritais; nem toda notícia representa inscrição aberta."
+    },
+    {
+      "nome": "Portal do Servidor Federal — Concursos e provimento",
+      "url": "https://www.gov.br/servidor/pt-br/acesso-a-informacao/gestao-de-pessoas/concursos-publicos-e-provimento-de-pessoal",
+      "ativo": true,
+      "tipo": "concursos",
+      "observacao": "Autorizações e notícias federais; publicar somente itens com oportunidade e localidade confirmadas."
+    },
+    {
+      "nome": "Emprega Brasil / Ministério do Trabalho e Emprego",
+      "url": "https://servicos.mte.gov.br/",
       "ativo": false,
-      "observacao": "Definir página específica de vagas antes de ativar."
+      "tipo": "consulta_manual",
+      "observacao": "Portal oficial de consulta individual; não foi ativado para raspagem automática porque depende de serviços e dados de perfil."
     }
   ]
 }
