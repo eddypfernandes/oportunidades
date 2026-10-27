@@ -5,12 +5,30 @@
     "regiao_base": "Núcleo Bandeirante"
   },
   "regioes_prioritarias": [
-    { "nome": "Núcleo Bandeirante", "prioridade": 1 },
-    { "nome": "Guará", "prioridade": 2 },
-    { "nome": "Candangolândia", "prioridade": 2 },
-    { "nome": "Riacho Fundo", "prioridade": 2 },
-    { "nome": "Samambaia", "prioridade": 2 },
-    { "nome": "Park Way", "prioridade": 2 }
+    {
+      "nome": "Núcleo Bandeirante",
+      "prioridade": 1
+    },
+    {
+      "nome": "Guará",
+      "prioridade": 2
+    },
+    {
+      "nome": "Candangolândia",
+      "prioridade": 2
+    },
+    {
+      "nome": "Riacho Fundo",
+      "prioridade": 2
+    },
+    {
+      "nome": "Samambaia",
+      "prioridade": 2
+    },
+    {
+      "nome": "Park Way",
+      "prioridade": 2
+    }
   ],
   "regioes_ampliadas": [
     "Brasília",
@@ -34,9 +52,9 @@
   "fontes": [
     {
       "nome": "Agência Brasília",
-      "url": "https://www.agenciabrasilia.df.gov.br/",
-      "ativo": false,
-      "observacao": "Definir página específica de vagas antes de ativar."
+      "url": "https://agenciabrasilia.df.gov.br/",
+      "ativo": true,
+      "observacao": "Fonte ativa para teste inicial; o coletor lê artigos completos e só aceita conteúdo com termos de vagas e regiões configuradas."
     },
     {
       "nome": "Secretaria de Desenvolvimento Econômico, Trabalho e Renda do DF",
