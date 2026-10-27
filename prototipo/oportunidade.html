@@ -108,9 +108,7 @@
     async function carregarDetalhe() {
       const parametros = new URLSearchParams(window.location.search);
       const indice = Number.parseInt(parametros.get("i") || "0", 10);
-      const modoDemo = parametros.get("demo") === "1";
-      let vaga;
-      let demonstrativo = modoDemo;
+      const aviso = document.getElementById("aviso");
 
       try {
         const resposta = await fetch(URL_DADOS, { cache: "no-store" });
@@ -118,47 +116,56 @@
         const dados = await resposta.json();
         const todas = Array.isArray(dados.items) ? dados.items : [];
         const vagas = todas.filter(oportunidadeAtual);
-        if (!modoDemo && vagas[indice]) {
-          vaga = vagas[indice];
-        } else {
-          demonstrativo = true;
-          vaga = exemplos[Math.max(0, Math.min(indice, exemplos.length - 1))];
+        const vaga = vagas[indice];
+
+        if (!vaga) {
+          document.getElementById("titulo").textContent = "Oportunidade indisponível";
+          document.getElementById("empresa").textContent = "";
+          document.getElementById("localidade").textContent = "Dados não disponíveis";
+          document.getElementById("selo").textContent = "Sem dados válidos";
+          document.getElementById("selo").className = "badge text-bg-secondary";
+          document.getElementById("resumo").textContent = "Esta oportunidade não está disponível no período atual ou não possui uma data de publicação confirmada.";
+          document.getElementById("descricao").textContent = "";
+          aviso.textContent = "Nenhum conteúdo demonstrativo foi exibido. Volte à lista e selecione uma oportunidade válida.";
+          aviso.classList.remove("d-none");
+          document.getElementById("dataPublicacao").textContent = "Não confirmada";
+          document.getElementById("fonte").textContent = "Não informada";
+          return;
+        }
+
+        mostrarTexto("titulo", vaga.titulo, "Oportunidade");
+        mostrarTexto("empresa", vaga.empresa, "Empresa não informada");
+        mostrarTexto("localidade", vaga.localidade, "Distrito Federal");
+        mostrarTexto("resumo", vaga.resumo, "Consulte a publicação original para obter mais informações.");
+
+        const descricao = document.getElementById("descricao");
+        descricao.innerHTML = "";
+        const paragrafos = Array.isArray(vaga.descricao) ? vaga.descricao : [];
+        paragrafos.slice(0, 8).forEach(texto => {
+          const p = document.createElement("p");
+          p.className = "mb-3";
+          p.textContent = texto;
+          descricao.appendChild(p);
+        });
+
+        mostrarTexto("dataPublicacao", vaga.publicado_em);
+        mostrarTexto("fonte", vaga.fonte);
+        document.getElementById("selo").className = "badge text-bg-success";
+        document.getElementById("selo").textContent = "Dados do repositório";
+
+        if (vaga.url && /^https?:\\/\\//i.test(vaga.url)) {
+          const link = document.getElementById("linkOriginal");
+          link.href = vaga.url;
+          link.classList.remove("d-none");
         }
       } catch (erro) {
-        demonstrativo = true;
-        vaga = exemplos[Math.max(0, Math.min(indice, exemplos.length - 1))];
-      }
-
-      mostrarTexto("titulo", vaga.titulo, "Oportunidade");
-      mostrarTexto("empresa", vaga.empresa, "Empresa não informada");
-      mostrarTexto("localidade", vaga.localidade, "Distrito Federal");
-      mostrarTexto("resumo", vaga.resumo, demonstrativo ? "Detalhes demonstrativos para validar o layout." : "Consulte a publicação original para obter mais informações.");
-
-      const descricao = document.getElementById("descricao");
-      descricao.innerHTML = "";
-      const paragrafos = Array.isArray(vaga.descricao) ? vaga.descricao : [];
-      paragrafos.slice(0, 8).forEach(texto => {
-        const p = document.createElement("p");
-        p.className = "mb-3";
-        p.textContent = texto;
-        descricao.appendChild(p);
-      });
-
-      mostrarTexto("dataPublicacao", vaga.publicado_em);
-      mostrarTexto("fonte", vaga.fonte);
-      document.getElementById("selo").className = demonstrativo ? "badge text-bg-warning" : "badge text-bg-success";
-      document.getElementById("selo").textContent = demonstrativo ? "Exemplo demonstrativo" : "Dados do repositório";
-
-      if (demonstrativo) {
-        const aviso = document.getElementById("aviso");
-        aviso.textContent = "Você está vendo dados genéricos de demonstração. Eles não representam uma vaga real.";
+        document.getElementById("titulo").textContent = "Não foi possível carregar a oportunidade";
+        document.getElementById("empresa").textContent = "";
+        document.getElementById("resumo").textContent = "Os dados reais não puderam ser carregados. Tente novamente mais tarde.";
+        document.getElementById("selo").textContent = "Falha ao carregar";
+        document.getElementById("selo").className = "badge text-bg-danger";
+        aviso.textContent = "O protótipo não substitui uma falha de leitura por conteúdo demonstrativo.";
         aviso.classList.remove("d-none");
-      }
-
-      if (!demonstrativo && vaga.url && /^https?:\/\//i.test(vaga.url)) {
-        const link = document.getElementById("linkOriginal");
-        link.href = vaga.url;
-        link.classList.remove("d-none");
       }
     }
 
