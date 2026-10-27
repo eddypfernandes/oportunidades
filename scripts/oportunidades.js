@@ -69,12 +69,57 @@ function decodificarEntidades(texto) {
 
 function textoLimpo(html) {
   return decodificarEntidades(String(html || "")
-    .replace(/<script\b[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style\b[\s\S]*?<\/style>/gi, " ")
-    .replace(/<svg\b[\s\S]*?<\/svg>/gi, " ")
+    .replace(/<!--([\s\S]*?)-->/g, " ")
+    .replace(/<(script|style|svg|noscript|nav|header|footer|aside|form)\b[^>]*>[\s\S]*?<\/\1>/gi, " ")
     .replace(/<[^>]+>/g, " "))
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function extrairConteudoPrincipal(html) {
+  const secoes = [
+    /<article\b[^>]*>([\s\S]*?)<\/article>/i,
+    /<main\b[^>]*>([\s\S]*?)<\/main>/i,
+    /<div\b[^>]*(?:id|class)=["'][^"']*(?:content|conteudo|article|materia|texto-noticia|view-content)[^"']*["'][^>]*>([\s\S]*?)<\/div>/i
+  ];
+
+  for (const regex of secoes) {
+    const match = html.match(regex);
+    if (match && textoLimpo(match[1]).length >= 180) {
+      return textoLimpo(match[1]);
+    }
+  }
+
+  return textoLimpo(html);
+}
+
+function tituloGenerico(titulo, url) {
+  const t = normalizar(titulo);
+  const caminho = normalizar(url);
+  const titulosBloqueados = [
+    "ultimas noticias", "destaques", "noticias", "noticias recentes",
+    "arquivo de quero uma vaga", "por que estagiar", "contrate com o ciee",
+    "concursos publicos e provimento de pessoal", "portal do servidor",
+    "servicos e informacoes do brasil", "pagina inicial", "home"
+  ];
+
+  if (titulosBloqueados.some(item => t === normalizar(item))) return true;
+  if (/\/(categoria|categorias|tag|topicos|assuntos|busca|buscar|pagina|page)\//i.test(caminho)) return true;
+  if (/\/noticias\/(educacao-e-pesquisa|saude|trabalho)\/?$/i.test(caminho)) return true;
+  return false;
+}
+
+function tituloIndicaOportunidade(titulo, fonte, url) {
+  const t = normalizar(titulo);
+  const caminho = normalizar(url);
+  if (tituloGenerico(titulo, url)) return false;
+
+  const termos = /\b(vaga|vagas|emprego|empregos|oportunidade|oportunidades|estagio|aprendiz|aprendizagem|processo seletivo|concurso|concursos|edital|selecao publica|cadastro reserva|agencias do trabalhador|trabalhador|contratacao|bolsista|trainee|convocacao de aprovados)\b/;
+  const tipo = normalizar(fonte.tipo || "");
+
+  if (termos.test(t)) return true;
+  if (tipo === "vagas" && /\/vaga\//i.test(caminho) && t.length > 12) return true;
+  return false;
 }
 
 function tituloPagina(html) {
@@ -91,13 +136,13 @@ function tituloPagina(html) {
   return "";
 }
 
-function dataPublicacao(html, texto) {
-  const meta = html.match(/<meta[^>]+(?:property|name)=["'](?:article:published_time|date|datePublished)["'][^>]+content=["']([^"']+)["']/i)
+function dataPublicacao(html) {
+  const meta = html.match(/<meta[^>]+(?:property|name)=["'](?:article:published_time|datePublished|date)["'][^>]+content=["']([^"']+)["']/i)
+    || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["'](?:article:published_time|datePublished|date)["']/i)
     || html.match(/<time[^>]+datetime=["']([^"']+)["']/i);
-  if (meta) return meta[1].slice(0, 10);
-  const data = texto.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
-  if (data) return `${data[3]}-${data[2].padStart(2,"0")}-${data[1].padStart(2,"0")}`;
-  return "";
+  if (!meta) return "";
+  const data = meta[1].match(/^(\d{4}-\d{2}-\d{2})/);
+  return data ? data[1] : "";
 }
 
 function urlAbsoluta(url, origem) {
@@ -144,10 +189,22 @@ function extrairLinks(html, fonte) {
 }
 
 function resumir(texto, titulo) {
-  const limpo = texto.replace(titulo, " ").replace(/\s+/g, " ").trim();
-  const termos = /\b(vagas?|sal[aá]rio|remunera[cç][aã]o|oportunidades?|curr[ií]culo|experi[eê]ncia|trabalhador)\b/i;
-  const frases = limpo.split(/(?<=[.!?])\s+/).filter(frase => frase.length > 35 && termos.test(frase));
-  return (frases.slice(0, 3).join(" ").slice(0, 420) || limpo.slice(0, 320)).trim();
+  const limpo = texto
+    .replace(titulo, " ")
+    .replace(/\b(ir para o conteudo|abrir menu principal de navegacao|menu principal|termos mais buscados|servicos e informacoes do brasil|buscar servicos por categorias)\b/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const termos = /\b(vagas?|sal[aá]rio|remunera[cç][aã]o|oportunidades?|curr[ií]culo|experi[eê]ncia|trabalhador|est[aá]gio|aprendiz|edital|inscri[cç][aã]o|concurso|processo seletivo|requisitos?|bolsa)\b/i;
+  const frases = limpo.split(/(?<=[.!?])\s+/).filter(frase =>
+    frase.length > 45 &&
+    termos.test(frase) &&
+    !/termos mais buscados|abrir menu|fechar solucoes|nome do site|servicos e informacoes/i.test(frase)
+  );
+
+  const resumo = frases.slice(0, 3).join(" ").slice(0, 420).trim();
+  if (resumo.length >= 60) return resumo;
+  return limpo.length >= 60 ? limpo.slice(0, 260).trim() : "";
 }
 
 async function executar() {
@@ -170,7 +227,12 @@ async function executar() {
         try {
           const artigo = await baixar(link.url);
           const titulo = tituloPagina(artigo) || link.titulo;
-          const texto = textoLimpo(artigo);
+          if (!tituloIndicaOportunidade(titulo, fonte, link.url)) {
+            console.log(`REJEITADO (título genérico ou sem sinal de oportunidade): ${titulo}`);
+            continue;
+          }
+
+          const texto = extrairConteudoPrincipal(artigo);
           if (!pareceConteudoDeVaga(titulo + " " + texto)) continue;
 
           const regioes = localizarRegioes(titulo + " " + texto, localidades);
@@ -184,7 +246,7 @@ async function executar() {
             empresa: fonte.nome,
             localidade: regioes.join(", "),
             resumo: resumir(texto, titulo),
-            publicado_em: dataPublicacao(artigo, texto),
+            publicado_em: dataPublicacao(artigo),
             url: link.url,
             fonte: fonte.nome
           });
