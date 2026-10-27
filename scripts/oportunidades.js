@@ -168,7 +168,7 @@ function tituloPagina(html) {
   return "";
 }
 
-function dataPublicacao(html, textoPrincipal) {
+function dataPublicacao(html, textoPrincipal, url = "") {
   const meta = html.match(/<meta[^>]+(?:property|name)=["'](?:article:published_time|datePublished|date)["'][^>]+content=["']([^"']+)["']/i)
     || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["'](?:article:published_time|datePublished|date)["']/i)
     || html.match(/<time[^>]+datetime=["']([^"']+)["']/i);
@@ -176,6 +176,9 @@ function dataPublicacao(html, textoPrincipal) {
     const dataMeta = meta[1].match(/^(\d{4}-\d{2}-\d{2})/);
     if (dataMeta) return dataMeta[1];
   }
+
+  const dataIso = String(textoPrincipal || "").match(/\b(\d{4})-(\d{2})-(\d{2})\b/);
+  if (dataIso) return dataIso[0];
 
   // Só considera datas no início do conteúdo principal, onde portais costumam exibir a publicação.
   const trechoInicial = String(textoPrincipal || "").slice(0, 500);
@@ -290,7 +293,7 @@ async function executar() {
             localidade: regioes.join(", "),
             resumo: descricao.resumo || resumir(texto, titulo),
             descricao: descricao.descricao,
-            publicado_em: dataPublicacao(artigo, texto),
+            publicado_em: dataPublicacao(artigo, texto, link.url),
             url: link.url,
             fonte: fonte.nome
           });
