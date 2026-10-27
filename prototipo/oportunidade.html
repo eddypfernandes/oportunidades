@@ -146,7 +146,7 @@
         document.getElementById("selo").className = "badge text-bg-success";
         document.getElementById("selo").textContent = vaga.publicado_em ? "Data registrada no repositório" : "Data não informada";
 
-        if (vaga.url && /^https?:\\/\\//i.test(vaga.url)) {
+        if (vaga.url && (String(vaga.url).startsWith("https://") || String(vaga.url).startsWith("http://"))) {
           const link = document.getElementById("linkOriginal");
           link.href = vaga.url;
           link.classList.remove("d-none");
