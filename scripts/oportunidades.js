@@ -171,7 +171,7 @@ async function executar() {
           const artigo = await baixar(link.url);
           const titulo = tituloPagina(artigo) || link.titulo;
           const texto = textoLimpo(artigo);
-          if (!pareceConteudoDeVaga(titulo + " " + texto) && fonte.tipo !== "concursos") continue;
+          if (!pareceConteudoDeVaga(titulo + " " + texto)) continue;
 
           const regioes = localizarRegioes(titulo + " " + texto, localidades);
           if (!regioes.length) continue;
