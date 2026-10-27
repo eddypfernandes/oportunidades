@@ -2,6 +2,11 @@ name: Oportunidades
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - "config.json"
+      - "scripts/oportunidades.js"
+      - ".github/workflows/oportunidades.yml"
   schedule:
     - cron: "17,47 * * * *"
       timezone: "America/Sao_Paulo"
