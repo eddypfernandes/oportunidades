@@ -120,19 +120,19 @@ function localizarRegioes(texto, localidades) {
 
 function extrairLinks(html, fonte) {
   const encontrados = new Map();
-  const regex = /<a\\b[^>]*href=["']([^"']+)["'][^>]*>([\\s\\S]*?)<\\/a>/gi;
+  const regex = /<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
   const hostFonte = new URL(fonte.url).hostname;
-  const caminhosRelevantes = /vaga|oportun|estag|aprendiz|concurs|processo|trabalhador|emprego|noticia|notícia|\\/w\\//i;
+  const caminhosRelevantes = /vaga|oportun|estag|aprendiz|concurs|processo|trabalhador|emprego|noticia|notícia|\/w\//i;
 
   for (const link of html.matchAll(regex)) {
     const titulo = textoLimpo(link[2]);
     const url = urlAbsoluta(link[1], fonte.url);
-    if (!titulo || titulo.length < 12 || !/^https?:\\/\\//i.test(url)) continue;
+    if (!titulo || titulo.length < 12 || !/^https?:\/\//i.test(url)) continue;
 
     let endereco;
     try { endereco = new URL(url); } catch { continue; }
     if (endereco.hostname !== hostFonte) continue;
-    if (/\\/topicos|\\/busca|\\/buscar|\\/tag\\/|\\/categoria\\//i.test(endereco.pathname)) continue;
+    if (/\/topicos|\/busca|\/buscar|\/tag\/|\/categoria\//i.test(endereco.pathname)) continue;
     if (endereco.pathname === "/" || endereco.pathname === "/DF" || endereco.pathname === "/DF/") continue;
 
     const linkRelevante = caminhosRelevantes.test(endereco.pathname) || pareceConteudoDeVaga(titulo);
