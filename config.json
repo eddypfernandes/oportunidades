@@ -1,4 +1,35 @@
 {
+  "localidade": {
+    "cidade": "Brasília",
+    "estado": "DF",
+    "regiao_base": "Núcleo Bandeirante"
+  },
+  "regioes_prioritarias": [
+    { "nome": "Núcleo Bandeirante", "prioridade": 1 },
+    { "nome": "Guará", "prioridade": 2 },
+    { "nome": "Candangolândia", "prioridade": 2 },
+    { "nome": "Riacho Fundo", "prioridade": 2 },
+    { "nome": "Samambaia", "prioridade": 2 },
+    { "nome": "Park Way", "prioridade": 2 }
+  ],
+  "regioes_ampliadas": [
+    "Brasília",
+    "Distrito Federal"
+  ],
+  "termos_ampliados": [
+    "Núcleo Bandeirante",
+    "Guará",
+    "Guará I",
+    "Guará II",
+    "Candangolândia",
+    "Riacho Fundo",
+    "Riacho Fundo I",
+    "Riacho Fundo II",
+    "Samambaia",
+    "Park Way",
+    "Brasília",
+    "Distrito Federal"
+  ],
   "quantidade": 20,
   "fontes": [
     {
