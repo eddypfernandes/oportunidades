@@ -43,7 +43,8 @@
                 <p id="empresa" class="fs-5 mb-4"></p>
                 <hr>
                 <h2 class="h5 fw-bold mt-4">Sobre a oportunidade</h2>
-                <p id="resumo" class="mb-4">Carregando dados do repositório.</p>
+                <p id="resumo" class="mb-3">Carregando dados do repositório.</p>
+                <div id="descricao" class="mb-4"></div>
                 <div class="row g-3">
                   <div class="col-12 col-md-6">
                     <div class="border rounded-3 p-3 h-100">
@@ -87,6 +88,19 @@
       { titulo: "Auxiliar de serviços gerais", empresa: "Organização demonstrativa", localidade: "Candangolândia", resumo: "Exemplo de conteúdo; não representa uma vaga real aberta.", publicado_em: "", url: "", fonte: "Demonstração", demonstrativo: true }
     ];
 
+    function diasDesdePublicacao(vaga) {
+      if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(String(vaga.publicado_em || ""))) return null;
+      const data = new Date(vaga.publicado_em + "T00:00:00");
+      if (Number.isNaN(data.getTime())) return null;
+      return Math.floor((new Date().setHours(0, 0, 0, 0) - data.getTime()) / 86400000);
+    }
+
+    function oportunidadeAtual(vaga) {
+      const dias = diasDesdePublicacao(vaga);
+      if (dias === null || dias < 0) return false;
+      return dias <= (/concurso|edital|processo seletivo|selecao publica/i.test(vaga.titulo || "") ? 30 : 7);
+    }
+
     function mostrarTexto(id, valor, fallback = "Não informado") {
       document.getElementById(id).textContent = valor || fallback;
     }
@@ -102,7 +116,8 @@
         const resposta = await fetch(URL_DADOS, { cache: "no-store" });
         if (!resposta.ok) throw new Error("JSON indisponível");
         const dados = await resposta.json();
-        const vagas = Array.isArray(dados.items) ? dados.items : [];
+        const todas = Array.isArray(dados.items) ? dados.items : [];
+        const vagas = todas.filter(oportunidadeAtual);
         if (!modoDemo && vagas[indice]) {
           vaga = vagas[indice];
         } else {
@@ -118,6 +133,17 @@
       mostrarTexto("empresa", vaga.empresa, "Empresa não informada");
       mostrarTexto("localidade", vaga.localidade, "Distrito Federal");
       mostrarTexto("resumo", vaga.resumo, demonstrativo ? "Detalhes demonstrativos para validar o layout." : "Consulte a publicação original para obter mais informações.");
+
+      const descricao = document.getElementById("descricao");
+      descricao.innerHTML = "";
+      const paragrafos = Array.isArray(vaga.descricao) ? vaga.descricao : [];
+      paragrafos.slice(0, 8).forEach(texto => {
+        const p = document.createElement("p");
+        p.className = "mb-3";
+        p.textContent = texto;
+        descricao.appendChild(p);
+      });
+
       mostrarTexto("dataPublicacao", vaga.publicado_em);
       mostrarTexto("fonte", vaga.fonte);
       document.getElementById("selo").className = demonstrativo ? "badge text-bg-warning" : "badge text-bg-success";
