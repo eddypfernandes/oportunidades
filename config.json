@@ -1,0 +1,17 @@
+{
+  "quantidade": 20,
+  "fontes": [
+    {
+      "nome": "Agência Brasília",
+      "url": "https://www.agenciabrasilia.df.gov.br/",
+      "ativo": false,
+      "observacao": "Definir página específica de vagas antes de ativar."
+    },
+    {
+      "nome": "Secretaria de Desenvolvimento Econômico, Trabalho e Renda do DF",
+      "url": "https://www.trabalho.df.gov.br/",
+      "ativo": false,
+      "observacao": "Definir página específica de vagas antes de ativar."
+    }
+  ]
+}
