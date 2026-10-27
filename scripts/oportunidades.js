@@ -2,7 +2,6 @@ const fs = require("fs");
 const https = require("https");
 
 const CONFIG_PATH = "config.json";
-const LOCALIDADES_PATH = "localidades.txt";
 const OUTPUT_PATH = "data/oportunidades.json";
 
 function normalizar(texto) {
@@ -14,15 +13,16 @@ function normalizar(texto) {
     .trim();
 }
 
-function carregarLocalidades() {
-  if (!fs.existsSync(LOCALIDADES_PATH)) {
-    throw new Error("Arquivo localidades.txt não encontrado.");
+function carregarLocalidades(config) {
+  const termos = Array.isArray(config.termos_ampliados)
+    ? config.termos_ampliados
+    : [];
+
+  if (!termos.length) {
+    throw new Error("A lista termos_ampliados não foi encontrada em config.json.");
   }
 
-  return fs.readFileSync(LOCALIDADES_PATH, "utf8")
-    .split(/\r?\n/)
-    .map(item => item.trim())
-    .filter(Boolean);
+  return termos;
 }
 
 function baixar(url) {
@@ -123,7 +123,7 @@ function pareceVaga(item) {
 
 async function executar() {
   const config = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
-  const localidades = carregarLocalidades();
+  const localidades = carregarLocalidades(config);
   const fontes = (config.fontes || []).filter(fonte => fonte.ativo === true);
   const candidatos = [];
 
