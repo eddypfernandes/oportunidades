@@ -105,7 +105,7 @@ function urlAbsoluta(url, origem) {
 }
 
 function pareceConteudoDeVaga(texto) {
-  return /\b(vagas? de emprego|oportunidades? de emprego|vagas? abertas|processo seletivo|oportunidades? profissionais|ag[eê]ncias? do trabalhador|mercado de trabalho|contrata[cç][aã]o)\b/i.test(texto);
+  return /\b(vagas?(?: de emprego| abertas)?|oportunidades?(?: de emprego| profissionais)?|processo seletivo|est[aá]gio|aprendiz(?:agem)?|concursos? p[uú]blicos?|edital|ag[eê]ncias? do trabalhador|mercado de trabalho|contrata[cç][aã]o)\b/i.test(texto);
 }
 
 function localizarRegioes(texto, localidades) {
@@ -173,7 +173,7 @@ async function executar() {
           const texto = textoLimpo(artigo);
           if (!pareceConteudoDeVaga(titulo + " " + texto) && fonte.tipo !== "concursos") continue;
 
-          const regioes = localizarRegioes(texto, localidades);
+          const regioes = localizarRegioes(titulo + " " + texto, localidades);
           if (!regioes.length) continue;
 
           const chave = link.url.replace(/\/$/, "");
