@@ -85,12 +85,44 @@ function extrairConteudoPrincipal(html) {
 
   for (const regex of secoes) {
     const match = html.match(regex);
-    if (match && textoLimpo(match[1]).length >= 180) {
-      return textoLimpo(match[1]);
-    }
+    if (match && textoLimpo(match[1]).length >= 180) return match[1];
+  }
+  return html;
+}
+
+function extrairParagrafos(html) {
+  const limpos = [];
+  const regex = /<p\b[^>]*>([\s\S]*?)<\/p>/gi;
+  for (const match of String(html || "").matchAll(regex)) {
+    const paragrafo = textoLimpo(match[1]);
+    if (paragrafo.length < 45) continue;
+    if (/ir para o conteudo|abrir menu|termos mais buscados|compartilhe nas redes sociais|voltar ao site|faça login|faca login/i.test(paragrafo)) continue;
+    if (!limpos.includes(paragrafo)) limpos.push(paragrafo);
+  }
+  return limpos;
+}
+
+function limitarSemCortarPalavra(texto, limite) {
+  const limpo = String(texto || "").replace(/\s+/g, " ").trim();
+  if (limpo.length <= limite) return limpo;
+  const trecho = limpo.slice(0, limite + 1);
+  const corte = trecho.lastIndexOf(" ");
+  return (trecho.slice(0, corte > 0 ? corte : limite).replace(/[.,;:!?-]+$/, "") + "…").trim();
+}
+
+function construirDescricao(html, titulo, textoFallback) {
+  let paragrafos = extrairParagrafos(html).filter(p => normalizar(p) !== normalizar(titulo));
+  if (!paragrafos.length) {
+    const texto = String(textoFallback || "").replace(titulo, "").trim();
+    paragrafos = texto.split(/(?<=[.!?])\s+/).filter(p => p.length >= 45);
   }
 
-  return textoLimpo(html);
+  const resumo = limitarSemCortarPalavra(paragrafos[0] || "", 240);
+  const descricao = paragrafos.slice(0, 8);
+  return {
+    resumo,
+    descricao: descricao.length ? descricao : (resumo ? [resumo] : [])
+  };
 }
 
 function tituloGenerico(titulo, url) {
@@ -136,13 +168,22 @@ function tituloPagina(html) {
   return "";
 }
 
-function dataPublicacao(html) {
+function dataPublicacao(html, textoPrincipal) {
   const meta = html.match(/<meta[^>]+(?:property|name)=["'](?:article:published_time|datePublished|date)["'][^>]+content=["']([^"']+)["']/i)
     || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["'](?:article:published_time|datePublished|date)["']/i)
     || html.match(/<time[^>]+datetime=["']([^"']+)["']/i);
-  if (!meta) return "";
-  const data = meta[1].match(/^(\d{4}-\d{2}-\d{2})/);
-  return data ? data[1] : "";
+  if (meta) {
+    const dataMeta = meta[1].match(/^(\d{4}-\d{2}-\d{2})/);
+    if (dataMeta) return dataMeta[1];
+  }
+
+  // Só considera datas no início do conteúdo principal, onde portais costumam exibir a publicação.
+  const trechoInicial = String(textoPrincipal || "").slice(0, 500);
+  const dataVisivel = trechoInicial.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
+  if (!dataVisivel) return "";
+  const dia = dataVisivel[1].padStart(2, "0");
+  const mes = dataVisivel[2].padStart(2, "0");
+  return `${dataVisivel[3]}-${mes}-${dia}`;
 }
 
 function urlAbsoluta(url, origem) {
@@ -232,7 +273,8 @@ async function executar() {
             continue;
           }
 
-          const texto = extrairConteudoPrincipal(artigo);
+          const htmlPrincipal = extrairConteudoPrincipal(artigo);
+          const texto = textoLimpo(htmlPrincipal);
           if (!pareceConteudoDeVaga(titulo + " " + texto)) continue;
 
           const regioes = localizarRegioes(titulo + " " + texto, localidades);
@@ -241,12 +283,14 @@ async function executar() {
           const chave = link.url.replace(/\/$/, "");
           if (candidatos.has(chave)) continue;
 
+          const descricao = construirDescricao(htmlPrincipal, titulo, texto);
           candidatos.set(chave, {
             titulo,
             empresa: fonte.nome,
             localidade: regioes.join(", "),
-            resumo: resumir(texto, titulo),
-            publicado_em: dataPublicacao(artigo),
+            resumo: descricao.resumo || resumir(texto, titulo),
+            descricao: descricao.descricao,
+            publicado_em: dataPublicacao(artigo, texto),
             url: link.url,
             fonte: fonte.nome
           });
