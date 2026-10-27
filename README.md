@@ -12,19 +12,21 @@ Módulo experimental de oportunidades de emprego para o GUIA COMERCIAL.
 
 ## Automação de dados
 
-- `config.json`: regiões, termos geográficos, quantidade máxima e fontes.
-- `scripts/oportunidades.js`: coleta inicial e triagem.
+- `config.json`: localidades, quantidade máxima e catálogo de fontes oficiais.
+- `scripts/oportunidades.js`: coleta páginas de origem, verifica título/conteúdo e exige correspondência com as localidades configuradas.
 - `data/oportunidades.json`: dados consumidos pelo protótipo.
-- `.github/workflows/oportunidades.yml`: execução da coleta.
-- `.github/workflows/pages.yml`: publicação do protótipo no GitHub Pages.
+- `.github/workflows/oportunidades.yml`: execução agendada e manual da coleta.
 
-A estrutura geográfica segue a configuração usada pelo repositório [radar-ticker](https://github.com/eddypfernandes/radar-ticker). A lista `termos_ampliados` foi copiada para este repositório, portanto ainda não existe sincronização automática entre os dois arquivos de configuração.
+### Fontes configuradas
 
-## Estado experimental
+- Agência Brasília — notícias sobre as Agências do Trabalhador.
+- IEL Distrito Federal — estágios e aprendizagem.
+- CIEE — estágios, aprendizagem, PCD e processos públicos.
+- Secretaria de Economia do DF — concursos distritais.
+- Portal do Servidor Federal — concursos e provimento.
+- Emprega Brasil — link de consulta manual; não participa da raspagem automática porque o acesso depende de serviços/perfil do trabalhador.
 
-As fontes de vagas permanecem desativadas até a configuração de páginas específicas e a validação da coleta. O JSON está vazio no momento; por isso, o protótipo apresenta exemplos genéricos, não vagas reais.
-
-Antes de ativar a coleta, é necessário validar as páginas de origem e melhorar a extração para confirmar a localidade no conteúdo completo da vaga. Não publicar dados inventados, links de busca genéricos ou detalhes não confirmados.
+A coleta automática depende do HTML que cada portal disponibiliza e pode precisar de ajustes específicos se um site mudar a estrutura, exigir JavaScript ou bloquear requisições. A presença de uma fonte na configuração não significa que todas as vagas desse portal foram capturadas. O coletor deve manter somente páginas com evidência de oportunidade e localidade encontrada no conteúdo.
 
 ## Publicação do protótipo
 
