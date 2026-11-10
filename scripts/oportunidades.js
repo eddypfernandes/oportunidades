@@ -155,7 +155,7 @@ function tituloIndicaOportunidade(titulo, fonte, url, texto = "") {
   if (tituloGenerico(titulo, url)) return false;
 
   if (tipo === "vagas") {
-    const paginaIndividual = /vaga|jobs?|viewjob|empresa\\/anuncios|pt-br\\/vaga|vaga-de-|job-/i.test(url);
+    const paginaIndividual = /vaga|jobs?|viewjob|empresa\/anuncios|pt-br\/vaga|vaga-de-|job-/i.test(url);
     const conteudoDeVaga = /\b(atividades|requisitos|candidatar|candidate-se|inscreva-se|bolsa|remuneracao|salario|descricao|sobre a vaga|local de trabalho)\b/i.test(normalizar(texto));
     const tituloValido = t.length >= 8 && !/^(estagio|aprendizagem|vagas|oportunidades|empregos?)$/.test(t);
     return paginaIndividual && tituloValido && conteudoDeVaga;
