@@ -22,35 +22,45 @@ function carregarLocalidades(config) {
   return Array.isArray(config.localidades_monitoradas) ? config.localidades_monitoradas : [];
 }
 
-function baixar(url) {
-  return new Promise((resolve, reject) => {
-    const requisicao = https.get(url, {
-      headers: {
-        "User-Agent": "Mozilla/5.0 (compatible; GuiaComercialOportunidades/1.0)",
-        "Accept": "text/html,application/xhtml+xml"
-      }
-    }, resposta => {
-      if (resposta.statusCode >= 300 && resposta.statusCode < 400 && resposta.headers.location) {
-        resposta.resume();
-        const redirecionada = new URL(resposta.headers.location, url).href;
-        baixar(redirecionada).then(resolve, reject);
-        return;
-      }
-      let corpo = "";
-      if (resposta.statusCode < 200 || resposta.statusCode >= 300) {
-        resposta.resume();
-        reject(new Error(`HTTP ${resposta.statusCode} em ${url}`));
-        return;
-      }
-      resposta.setEncoding("utf8");
-      resposta.on("data", parte => corpo += parte);
-      resposta.on("end", () => resolve(corpo));
+async function baixar(url, tentativa = 1) {
+  try {
+    return await new Promise((resolve, reject) => {
+      const requisicao = https.get(url, {
+        headers: {
+          "User-Agent": "Mozilla/5.0 (compatible; GuiaComercialOportunidades/1.0)",
+          "Accept": "text/html,application/xhtml+xml"
+        }
+      }, resposta => {
+        if (resposta.statusCode >= 300 && resposta.statusCode < 400 && resposta.headers.location) {
+          resposta.resume();
+          const redirecionada = new URL(resposta.headers.location, url).href;
+          baixar(redirecionada, tentativa).then(resolve, reject);
+          return;
+        }
+        let corpo = "";
+        if (resposta.statusCode < 200 || resposta.statusCode >= 300) {
+          resposta.resume();
+          reject(new Error(`HTTP ${resposta.statusCode} em ${url}`));
+          return;
+        }
+        resposta.setEncoding("utf8");
+        resposta.on("data", parte => corpo += parte);
+        resposta.on("end", () => resolve(corpo));
+      });
+      requisicao.setTimeout(40000, () => requisicao.destroy(new Error("Tempo limite excedido")));
+      requisicao.on("error", reject);
     });
-    requisicao.setTimeout(25000, () => requisicao.destroy(new Error("Tempo limite excedido")));
-    requisicao.on("error", reject);
-  });
+  } catch (erro) {
+    const recuperavel = /HTTP (429|500|502|503|504)|Tempo limite|ECONNRESET|ECONNREFUSED|ETIMEDOUT/i.test(erro.message);
+    if (recuperavel && tentativa < 3) {
+      const espera = tentativa * 2500;
+      console.log(`Nova tentativa ${tentativa + 1}/3 em ${espera}ms: ${url}`);
+      await new Promise(resolve => setTimeout(resolve, espera));
+      return baixar(url, tentativa + 1);
+    }
+    throw erro;
+  }
 }
-
 function decodificarEntidades(texto) {
   return String(texto || "")
     .replace(/&amp;/gi, "&")
@@ -145,7 +155,7 @@ function tituloIndicaOportunidade(titulo, fonte, url, texto = "") {
   if (tituloGenerico(titulo, url)) return false;
 
   if (tipo === "vagas") {
-    const paginaIndividual = /\/vaga\//i.test(url);
+    const paginaIndividual = /\/vaga\/|\/jobs?\/|\/job\//i.test(url);
     const conteudoDeVaga = /\b(atividades|requisitos|candidatar|candidate-se|inscreva-se|bolsa|remuneracao|salario)\b/i.test(normalizar(texto));
     const tituloValido = t.length >= 8 && !/^(estagio|aprendizagem|vagas|oportunidades|empregos?)$/.test(t);
     return paginaIndividual && tituloValido && conteudoDeVaga;
@@ -157,7 +167,10 @@ function tituloIndicaOportunidade(titulo, fonte, url, texto = "") {
   }
 
   if (tipo === "noticias_vagas") {
-    return /\b(vagas abertas|abre .*vagas|oferta .*vagas|selecao para .*vagas|processo seletivo para)\b/.test(t)
+    const tituloExplicito = /\b(vagas abertas|abre .*vagas|oferta .*vagas|selecao para .*vagas|processo seletivo para)\b/.test(t);
+    const noticiaAgencia = /agencias? do trabalhador oferecem salarios/.test(t)
+      && /\b(vagas?|oportunidades?|postos de trabalho|contratacoes?)\b/.test(normalizar(texto));
+    return (tituloExplicito || noticiaAgencia)
       && !/evento|mutirao|feira|palestra|programacao/.test(t);
   }
 
@@ -178,7 +191,21 @@ function tituloPagina(html) {
   return "";
 }
 
-function dataPublicacao(html, textoPrincipal, url = "") {
+function dataTextoISO(texto) {
+  const conteudo = String(texto || "");
+  const iso = conteudo.match(/\b(20\d{2})-(\d{2})-(\d{2})\b/);
+  if (iso) return iso[0];
+  const br = conteudo.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
+  if (br) {
+    const dia = br[1].padStart(2, "0");
+    const mes = br[2].padStart(2, "0");
+    const valor = br[3] + "-" + mes + "-" + dia;
+    return Number.isNaN(Date.parse(valor)) ? "" : valor;
+  }
+  return "";
+}
+
+function dataPublicacao(html, textoPrincipal, url = "", dataIndice = "") {
   const meta = String(html || "").match(/<meta[^>]+(?:property|name)=["'](?:article:published_time|datePublished|datePosted|date)["'][^>]+content=["']([^"']+)["']/i)
     || String(html || "").match(/<time[^>]+datetime=["']([^"']+)["']/i);
   if (meta) {
@@ -189,11 +216,8 @@ function dataPublicacao(html, textoPrincipal, url = "") {
   const jsonLd = String(html || "").match(/date(?:Published|Posted)["']\s*:\s*["'](\d{4}-\d{2}-\d{2})/i);
   if (jsonLd && !Number.isNaN(Date.parse(jsonLd[1]))) return jsonLd[1];
 
-  const trechoInicial = String(textoPrincipal || "").slice(0, 700);
-  const visivel = trechoInicial.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
-  if (!visivel) return "";
-  const iso = visivel[3] + "-" + visivel[2].padStart(2, "0") + "-" + visivel[1].padStart(2, "0");
-  return Number.isNaN(Date.parse(iso)) ? "" : iso;
+  const trechoInicial = String(textoPrincipal || "").slice(0, 1200);
+  return dataTextoISO(trechoInicial) || dataTextoISO(dataIndice);
 }
 
 function urlAbsoluta(url, origem) {
@@ -278,7 +302,7 @@ function dataDentroDaValidade(data, tipo) {
   return dias >= 0 && dias <= limite;
 }
 
-function extrairLinks(html, fonte) {
+function extrairLinks(html, fonte, localidades) {
   const encontrados = new Map();
   const regex = /<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
   const hostFonte = new URL(fonte.url).hostname;
@@ -287,7 +311,7 @@ function extrairLinks(html, fonte) {
   for (const link of html.matchAll(regex)) {
     const titulo = textoLimpo(link[2]);
     const url = urlAbsoluta(link[1], fonte.url);
-    if (!titulo || titulo.length < 12 || !/^https?:\/\//i.test(url)) continue;
+    if (!titulo || titulo.length < 8 || !/^https?:\/\//i.test(url)) continue;
 
     let endereco;
     try { endereco = new URL(url); } catch { continue; }
@@ -297,12 +321,26 @@ function extrairLinks(html, fonte) {
 
     const linkRelevante = caminhosRelevantes.test(endereco.pathname) || pareceConteudoDeVaga(titulo);
     if (!linkRelevante) continue;
-    if (!encontrados.has(endereco.href)) encontrados.set(endereco.href, { titulo, url: endereco.href, fonte: fonte.nome });
+
+    const posicao = link.index;
+    const contexto = html.slice(Math.max(0, posicao - 900), Math.min(html.length, posicao + link[0].length + 1300));
+    const dataIndice = dataTextoISO(contexto);
+    const regioesIndice = (localidades || []).filter(local => {
+      const termo = escaparRegex(local);
+      return new RegExp(`(^|[^a-z0-9])${termo}([^a-z0-9]|$)`, "i").test(normalizar(contexto));
+    }).sort((a, b) => b.length - a.length);
+    const item = {
+      titulo,
+      url: endereco.href,
+      fonte: fonte.nome,
+      data_indice: dataIndice,
+      localidade_indice: regioesIndice.filter(r => !["Brasília", "Distrito Federal"].includes(r)).join(", ")
+    };
+    if (!encontrados.has(endereco.href)) encontrados.set(endereco.href, item);
   }
 
   return [...encontrados.values()].slice(0, MAX_ARTIGOS_POR_FONTE);
 }
-
 function resumir(texto, titulo) {
   const limpo = texto
     .replace(titulo, " ")
@@ -327,32 +365,42 @@ async function executar() {
   const localidades = carregarLocalidades(config);
   const fontes = (config.fontes || []).filter(fonte => fonte.ativo === true);
   const candidatos = new Map();
+  const diagnosticos = [];
 
   console.log(`Localidades configuradas: ${localidades.length}`);
   console.log(`Fontes ativas: ${fontes.length}`);
 
   for (const fonte of fontes) {
+    const diagnostico = { fonte: fonte.nome, links: 0, paginas_lidas: 0, aceitos: 0, rejeitados: {}, erros: 0 };
+    const rejeitar = motivo => diagnostico.rejeitados[motivo] = (diagnostico.rejeitados[motivo] || 0) + 1;
     try {
       console.log(`\nConsultando índice: ${fonte.nome}`);
       const html = await baixar(fonte.url);
-      const links = extrairLinks(html, fonte);
-      console.log(`Links de notícias potencialmente relevantes: ${links.length}`);
+      const links = extrairLinks(html, fonte, localidades);
+      diagnostico.links = links.length;
+      console.log(`Links potencialmente relevantes: ${links.length}`);
 
       for (const link of links) {
         try {
           const artigo = await baixar(link.url);
+          diagnostico.paginas_lidas++;
           const titulo = tituloPagina(artigo) || link.titulo;
           const htmlPrincipal = extrairConteudoPrincipal(artigo);
           const texto = textoLimpo(htmlPrincipal);
           if (!tituloIndicaOportunidade(titulo, fonte, link.url, texto)) {
-            console.log(`REJEITADO (título genérico ou sem sinal de oportunidade): ${titulo}`);
+            rejeitar("sem_sinal_de_oportunidade");
+            console.log(`REJEITADO (sem sinal de oportunidade): ${titulo}`);
             continue;
           }
 
-          if (!pareceConteudoDeVaga(titulo + " " + texto)) continue;
+          if (!pareceConteudoDeVaga(titulo + " " + texto)) {
+            rejeitar("conteudo_nao_confirmado");
+            continue;
+          }
 
-          const publicadoEm = dataPublicacao(artigo, texto, link.url);
+          const publicadoEm = dataPublicacao(artigo, texto, link.url, link.data_indice);
           if (!dataDentroDaValidade(publicadoEm, fonte.tipo)) {
+            rejeitar("data_ausente_ou_fora_da_validade");
             console.log(`REJEITADO (data ausente ou fora da validade): ${titulo}`);
             continue;
           }
@@ -360,12 +408,16 @@ async function executar() {
           const regioes = localizarRegioes(titulo + " " + texto, localidades);
           const mencionaBrasilia = /\b(brasilia|distrito federal|df)\b/i.test(normalizar(titulo + " " + texto));
           if (!regioes.length && !mencionaBrasilia) {
+            rejeitar("localidade_nao_confirmada");
             console.log(`REJEITADO (abrangência Brasília/DF não confirmada): ${titulo}`);
             continue;
           }
 
           const chave = link.url.replace(/\/$/, "");
-          if (candidatos.has(chave)) continue;
+          if (candidatos.has(chave)) {
+            rejeitar("duplicado");
+            continue;
+          }
 
           const atividades = extrairAtividades(htmlPrincipal, texto);
           const tipoVaga = extrairTipoVaga(texto);
@@ -376,7 +428,7 @@ async function executar() {
             titulo,
             cidade: localidade.cidade || null,
             uf: localidade.estado || null,
-            localidade: regioes.filter(r => !["Brasília","Distrito Federal"].includes(r)).join(", ") || "Brasília/DF",
+            localidade: regioes.filter(r => !["Brasília","Distrito Federal"].includes(r)).join(", ") || link.localidade_indice || "Brasília/DF",
             atividades,
             tipo_vaga: tipoVaga,
             jornada_trabalho: jornadaTrabalho,
@@ -385,13 +437,18 @@ async function executar() {
             fonte: fonte.nome,
             link_original: link.url
           });
+          diagnostico.aceitos++;
           console.log(`ACEITO: ${titulo} [${regioes.join(", ")}]`);
         } catch (erro) {
+          diagnostico.erros++;
           console.error(`Falha ao ler artigo ${link.url}: ${erro.message}`);
         }
       }
     } catch (erro) {
+      diagnostico.erros++;
       console.error(`Falha na fonte ${fonte.nome}: ${erro.message}`);
+    } finally {
+      diagnosticos.push(diagnostico);
     }
   }
 
@@ -403,6 +460,10 @@ async function executar() {
   fs.mkdirSync("data", { recursive: true });
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(resultado, null, 2) + "\n", "utf8");
   console.log(`\nArtigos relevantes confirmados: ${items.length}`);
+  console.log("\nDIAGNÓSTICO POR FONTE:");
+  for (const d of diagnosticos) {
+    console.log(`${d.fonte}: links=${d.links}; páginas=${d.paginas_lidas}; aceitos=${d.aceitos}; erros=${d.erros}; rejeições=${JSON.stringify(d.rejeitados)}`);
+  }
   console.log(`Arquivo gerado: ${OUTPUT_PATH}`);
 }
 
