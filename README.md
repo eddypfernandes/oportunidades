@@ -10,6 +10,23 @@ Módulo experimental de oportunidades de emprego para o GUIA COMERCIAL.
 - Se o JSON estiver vazio ou indisponível, são exibidos exemplos genéricos claramente identificados como demonstração.
 - Para oportunidades reais, a página de detalhes mostra o link para a publicação original quando o item contém uma URL HTTP/HTTPS válida.
 
+## Estrutura padronizada dos registros
+
+Cada item em `data/oportunidades.json` utiliza os seguintes campos:
+
+- `tipo`: classificação da oportunidade (Vaga de emprego, Estágio, Jovem aprendiz ou Concurso público).
+- `titulo`: título específico da publicação.
+- `cidade` e `uf`: município e unidade federativa configurados para a coleta.
+- `localidade`: região administrativa/localidade identificada no conteúdo da publicação.
+- `resumo`: síntese objetiva do conteúdo.
+- `salario`: remuneração identificada; fica como `null` quando a fonte não informa.
+- `publicado_em`: data de publicação confirmada, no formato ISO `AAAA-MM-DD`.
+- `fonte`: portal ou instituição que publicou o conteúdo (não representa necessariamente a empresa contratante).
+- `link_original`: URL direta da publicação específica.
+- `descricao`: parágrafos adicionais extraídos da publicação.
+
+O objeto principal informa `versao_estrutura: 2` e `atualizado_em`. Não preencher salário, data ou local de trabalho por suposição. Quando a fonte não trouxer um dado, manter o campo sem informação em vez de inventá-lo.
+
 ## Automação de dados
 
 - `config.json`: localidades, quantidade máxima e catálogo de fontes oficiais.
