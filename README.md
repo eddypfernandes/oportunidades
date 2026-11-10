@@ -18,14 +18,14 @@ Cada item em `data/oportunidades.json` utiliza os seguintes campos:
 - `titulo`: título específico da publicação.
 - `cidade` e `uf`: município e unidade federativa configurados para a coleta.
 - `localidade`: região administrativa/localidade identificada no conteúdo da publicação.
-- `resumo`: síntese objetiva do conteúdo.
+- `atividades`: tarefas e responsabilidades identificadas na publicação.
+- `tipo_vaga`: regime ou modalidade contratual informada (CLT, temporária, efetiva, estágio, aprendiz etc.).
+- `jornada_trabalho`: horário, escala ou carga horária identificados.
 - `salario`: remuneração identificada; fica como `null` quando a fonte não informa.
 - `publicado_em`: data de publicação confirmada, no formato ISO `AAAA-MM-DD`.
 - `fonte`: portal ou instituição que publicou o conteúdo (não representa necessariamente a empresa contratante).
 - `link_original`: URL direta da publicação específica.
-- `descricao`: parágrafos adicionais extraídos da publicação.
-
-O objeto principal informa `versao_estrutura: 2` e `atualizado_em`. Não preencher salário, data ou local de trabalho por suposição. Quando a fonte não trouxer um dado, manter o campo sem informação em vez de inventá-lo.
+O objeto principal informa `versao_estrutura: 3` e `atualizado_em`. Não preencher atividades, tipo de vaga, jornada, salário, data ou local de trabalho por suposição. Quando a fonte não trouxer um dado, manter o campo como `null`; a interface apresenta “Não informado”.
 
 ## Automação de dados
 
