@@ -36,13 +36,28 @@
             <article class="card border-0 shadow-sm rounded-4">
               <div class="card-body p-4 p-lg-5">
                 <div class="d-flex flex-wrap gap-2 mb-3">
-                  <span id="localidade" class="badge text-bg-light border">Carregando…</span>
+                  <span id="tipo" class="badge text-bg-light border">Tipo não informado</span>
+                  <span id="localidade" class="badge text-bg-light border">Localidade não informada</span>
                   <span id="selo" class="badge text-bg-secondary">Protótipo</span>
                 </div>
                 <h1 id="titulo" class="h2 fw-bold">Carregando oportunidade…</h1>
-                <p id="empresa" class="fs-5 mb-4"></p>
                 <hr>
-                <h2 class="h5 fw-bold mt-4">Sobre a oportunidade</h2>
+                <h2 class="h5 fw-bold mt-4">Informações da oportunidade</h2>
+                <div class="row g-3 mb-4">
+                  <div class="col-12 col-md-6">
+                    <div class="border rounded-3 p-3 h-100">
+                      <div class="small gc-suave">Cidade / UF</div>
+                      <div id="cidade" class="fw-semibold">Não informada</div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="border rounded-3 p-3 h-100">
+                      <div class="small gc-suave">Salário / remuneração</div>
+                      <div id="salario" class="fw-semibold">Não informado</div>
+                    </div>
+                  </div>
+                </div>
+                <h2 class="h5 fw-bold mt-4">Resumo descritivo</h2>
                 <p id="resumo" class="mb-3">Carregando dados do repositório.</p>
                 <div id="descricao" class="mb-4"></div>
                 <div class="row g-3">
@@ -54,7 +69,7 @@
                   </div>
                   <div class="col-12 col-md-6">
                     <div class="border rounded-3 p-3 h-100">
-                      <div class="small gc-suave">Fonte</div>
+                      <div class="small gc-suave">Fonte publicadora</div>
                       <div id="fonte" class="fw-semibold">Não informada</div>
                     </div>
                   </div>
@@ -109,11 +124,13 @@
         if (!resposta.ok) throw new Error("JSON indisponível");
         const dados = await resposta.json();
         const todas = Array.isArray(dados.items) ? dados.items : [];
-        const vaga = todas.find(item => item.url === urlSelecionada && (oportunidadeAtual(item) || !item.publicado_em));
+        const vaga = todas.find(item => (item.link_original || item.url) === urlSelecionada && oportunidadeAtual(item));
 
         if (!vaga) {
           document.getElementById("titulo").textContent = "Oportunidade indisponível";
-          document.getElementById("empresa").textContent = "";
+          document.getElementById("tipo").textContent = "Tipo não informado";
+          document.getElementById("cidade").textContent = "Não informada";
+          document.getElementById("salario").textContent = "Não informado";
           document.getElementById("localidade").textContent = "Dados não disponíveis";
           document.getElementById("selo").textContent = "Sem dados válidos";
           document.getElementById("selo").className = "badge text-bg-secondary";
@@ -127,7 +144,9 @@
         }
 
         mostrarTexto("titulo", vaga.titulo, "Oportunidade");
-        mostrarTexto("empresa", vaga.empresa, "Empresa não informada");
+        mostrarTexto("tipo", vaga.tipo, "Oportunidade");
+        mostrarTexto("cidade", [vaga.cidade, vaga.uf].filter(Boolean).join(" / "), "Não informada");
+        mostrarTexto("salario", vaga.salario, "Não informado");
         mostrarTexto("localidade", vaga.localidade, "Distrito Federal");
         mostrarTexto("resumo", vaga.resumo, "Consulte a publicação original para obter mais informações.");
 
@@ -146,14 +165,15 @@
         document.getElementById("selo").className = "badge text-bg-success";
         document.getElementById("selo").textContent = vaga.publicado_em ? "Data registrada no repositório" : "Data não informada";
 
-        if (vaga.url && (String(vaga.url).startsWith("https://") || String(vaga.url).startsWith("http://"))) {
+        const urlOriginal = vaga.link_original || vaga.url || "";
+        if (urlOriginal && (String(urlOriginal).startsWith("https://") || String(urlOriginal).startsWith("http://"))) {
           const link = document.getElementById("linkOriginal");
-          link.href = vaga.url;
+          link.href = urlOriginal;
           link.classList.remove("d-none");
         }
       } catch (erro) {
         document.getElementById("titulo").textContent = "Não foi possível carregar a oportunidade";
-        document.getElementById("empresa").textContent = "";
+        document.getElementById("tipo").textContent = "Tipo não informado";
         document.getElementById("resumo").textContent = "Os dados reais não puderam ser carregados. Tente novamente mais tarde.";
         document.getElementById("selo").textContent = "Falha ao carregar";
         document.getElementById("selo").className = "badge text-bg-danger";
