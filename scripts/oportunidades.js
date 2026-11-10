@@ -246,14 +246,14 @@ function extrairTipoVaga(texto) {
   if (/\btemporári[oa]\b/i.test(conteudo)) tipos.push("Temporária");
   if (/\b(efetiv[oa]|prazo indeterminado)\b/i.test(conteudo)) tipos.push("Efetiva");
   if (/\b(PJ|pessoa jurídica)\b/i.test(conteudo)) tipos.push("Pessoa jurídica (PJ)");
-return [...new Set(tipos)].join(" / ") || null;
+  return [...new Set(tipos)].join(" / ") || null;
 }
 
 function extrairJornada(texto) {
   const conteudo = String(texto || "");
-  const horario = conteudo.match(/\b\d{1,2}:\d{2}\\s*(?:às|as|a|-)\\s*\d{1,2}:\d{2}\b/i);
+  const horario = conteudo.match(/\b\d{1,2}:\d{2}\s*(?:às|as|a|-)\s*\d{1,2}:\d{2}\b/i);
   if (horario) return horario[0];
-  const carga = conteudo.match(/\b\d{1,2}\\s*(?:horas?|h)\\s*(?:por semana|semanais|diárias)?\b/i);
+  const carga = conteudo.match(/\b\d{1,2}\s*(?:horas?|h)\s*(?:por semana|semanais|diárias)?\b/i);
   if (carga) return carga[0];
   return extrairCampoRotulado(conteudo, "jornada(?:\\s+de\\s+trabalho)?|carga\\s+horária|horários?|expediente");
 }
