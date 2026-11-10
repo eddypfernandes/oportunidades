@@ -155,8 +155,8 @@ function tituloIndicaOportunidade(titulo, fonte, url, texto = "") {
   if (tituloGenerico(titulo, url)) return false;
 
   if (tipo === "vagas") {
-    const paginaIndividual = /\/vaga\/|\/jobs?\/|\/job\//i.test(url);
-    const conteudoDeVaga = /\b(atividades|requisitos|candidatar|candidate-se|inscreva-se|bolsa|remuneracao|salario)\b/i.test(normalizar(texto));
+    const paginaIndividual = /\/vaga\/|\/jobs?\/|\/job\/|\/viewjob(?:\/|\?)/i.test(url) || /\/empresa\/anuncios\/a\d+\//i.test(url);
+    const conteudoDeVaga = /\b(atividades|requisitos|candidatar|candidate-se|inscreva-se|bolsa|remuneracao|salario|descricao|sobre a vaga|local de trabalho)\b/i.test(normalizar(texto));
     const tituloValido = t.length >= 8 && !/^(estagio|aprendizagem|vagas|oportunidades|empregos?)$/.test(t);
     return paginaIndividual && tituloValido && conteudoDeVaga;
   }
@@ -202,9 +202,19 @@ function dataTextoISO(texto) {
     const valor = br[3] + "-" + mes + "-" + dia;
     return Number.isNaN(Date.parse(valor)) ? "" : valor;
   }
+  let dias = null;
+  const relativo = conteudo.match(/\b(?:h[aá])\s+(\d+)\s+dias?\b/i);
+  if (relativo) dias = Number(relativo[1]);
+  else if (/\bontem\b/i.test(conteudo)) dias = 1;
+  else if (/\bhoje\b|\bagora\b|\b\d+\s+horas?\b/i.test(conteudo)) dias = 0;
+  if (dias !== null && Number.isFinite(dias)) {
+    const hoje = new Date();
+    const data = new Date(Date.UTC(hoje.getUTCFullYear(), hoje.getUTCMonth(), hoje.getUTCDate()));
+    data.setUTCDate(data.getUTCDate() - dias);
+    return data.toISOString().slice(0, 10);
+  }
   return "";
 }
-
 function dataPublicacao(html, textoPrincipal, url = "", dataIndice = "") {
   const meta = String(html || "").match(/<meta[^>]+(?:property|name)=["'](?:article:published_time|datePublished|datePosted|date)["'][^>]+content=["']([^"']+)["']/i)
     || String(html || "").match(/<time[^>]+datetime=["']([^"']+)["']/i);
@@ -306,7 +316,7 @@ function extrairLinks(html, fonte, localidades) {
   const encontrados = new Map();
   const regex = /<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
   const hostFonte = new URL(fonte.url).hostname;
-  const caminhosRelevantes = /vaga|oportun|estag|aprendiz|concurs|processo|trabalhador|emprego|noticia|notícia|\/w\//i;
+  const caminhosRelevantes = /vaga|oportun|estag|aprendiz|concurs|processo|trabalhador|emprego|noticia|notícia|viewjob|empresa\/anuncios|\/w\//i;
 
   for (const link of html.matchAll(regex)) {
     const titulo = textoLimpo(link[2]);
