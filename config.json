@@ -30,31 +30,13 @@
       "prioridade": 2
     }
   ],
-  "regioes_ampliadas": [
-    "Brasília",
-    "Distrito Federal"
-  ],
-  "termos_ampliados": [
-    "Núcleo Bandeirante",
-    "Guará",
-    "Guará I",
-    "Guará II",
-    "Candangolândia",
-    "Riacho Fundo",
-    "Riacho Fundo I",
-    "Riacho Fundo II",
-    "Samambaia",
-    "Park Way",
-    "Brasília",
-    "Distrito Federal"
-  ],
   "quantidade": 40,
   "fontes": [
     {
       "nome": "Agência Brasília",
       "url": "https://agenciabrasilia.df.gov.br/",
       "ativo": true,
-      "tipo": "noticias",
+      "tipo": "noticias_vagas",
       "observacao": "Notícias oficiais sobre vagas das Agências do Trabalhador do DF."
     },
     {
@@ -92,5 +74,17 @@
       "tipo": "consulta_manual",
       "observacao": "Portal oficial de consulta individual; não foi ativado para raspagem automática porque depende de serviços e dados de perfil."
     }
+  ],
+  "localidades_monitoradas": [
+    "Núcleo Bandeirante",
+    "Guará",
+    "Guará I",
+    "Guará II",
+    "Candangolândia",
+    "Riacho Fundo",
+    "Riacho Fundo I",
+    "Riacho Fundo II",
+    "Samambaia",
+    "Park Way"
   ]
 }
