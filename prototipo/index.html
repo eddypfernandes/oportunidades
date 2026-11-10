@@ -183,7 +183,11 @@
               <h3 class="card-title h4 fw-bold mb-3">${exibir(vaga.titulo, "Título não informado")}</h3>
               <p class="mb-2"><strong>Cidade:</strong> ${exibir(vaga.cidade)} / ${exibir(vaga.uf)}</p>
               <p class="mb-2"><strong>Salário:</strong> ${exibir(vaga.salario)}</p>
-              <p class="card-text gc-suave mb-4"><strong>Resumo:</strong> ${exibir(vaga.resumo, "Descrição não informada.")}</p>
+              <div class="mb-4">
+                <p class="mb-2"><strong>Atividades:</strong> ${exibir(vaga.atividades)}</p>
+                <p class="mb-2"><strong>Tipo de vaga:</strong> ${exibir(vaga.tipo_vaga)}</p>
+                <p class="mb-0"><strong>Jornada:</strong> ${exibir(vaga.jornada_trabalho)}</p>
+              </div>
               <div class="mt-auto pt-3 d-flex flex-wrap align-items-center gap-2">
                 <a class="btn btn-gc" href="${linkSeguro}" target="_blank" rel="noopener">Publicação original</a>
                 <a class="btn btn-outline-secondary" href="${detalhe}">Ficha completa</a>
