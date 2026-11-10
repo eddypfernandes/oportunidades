@@ -1,35 +1,8 @@
 {
   "localidade": {
     "cidade": "Brasília",
-    "estado": "DF",
-    "regiao_base": "Núcleo Bandeirante"
+    "estado": "DF"
   },
-  "regioes_prioritarias": [
-    {
-      "nome": "Núcleo Bandeirante",
-      "prioridade": 1
-    },
-    {
-      "nome": "Guará",
-      "prioridade": 2
-    },
-    {
-      "nome": "Candangolândia",
-      "prioridade": 2
-    },
-    {
-      "nome": "Riacho Fundo",
-      "prioridade": 2
-    },
-    {
-      "nome": "Samambaia",
-      "prioridade": 2
-    },
-    {
-      "nome": "Park Way",
-      "prioridade": 2
-    }
-  ],
   "quantidade": 40,
   "fontes": [
     {
@@ -76,6 +49,8 @@
     }
   ],
   "localidades_monitoradas": [
+    "Brasília",
+    "Distrito Federal",
     "Núcleo Bandeirante",
     "Guará",
     "Guará I",
@@ -85,6 +60,41 @@
     "Riacho Fundo I",
     "Riacho Fundo II",
     "Samambaia",
-    "Park Way"
-  ]
+    "Samambaia Norte",
+    "Samambaia Sul",
+    "Park Way",
+    "Plano Piloto",
+    "Asa Norte",
+    "Asa Sul",
+    "Lago Norte",
+    "Lago Sul",
+    "Sudoeste",
+    "Octogonal",
+    "Cruzeiro",
+    "Candangolândia",
+    "Taguatinga",
+    "Ceilândia",
+    "Gama",
+    "Santa Maria",
+    "Recanto das Emas",
+    "Brazlândia",
+    "Planaltina",
+    "Sobradinho",
+    "Sobradinho II",
+    "Paranoá",
+    "Itapoã",
+    "São Sebastião",
+    "Jardim Botânico",
+    "Águas Claras",
+    "Vicente Pires",
+    "SCIA",
+    "Estrutural",
+    "Fercal",
+    "Varjão",
+    "SIA",
+    "Arniqueira",
+    "Sol Nascente",
+    "Pôr do Sol"
+  ],
+  "abrangencia": "Brasília e todas as regiões administrativas do Distrito Federal"
 }
