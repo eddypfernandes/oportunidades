@@ -320,7 +320,7 @@ async function executar() {
           }
 
           const regioes = localizarRegioes(titulo + " " + texto, localidades);
-          const mencionaBrasilia = /\\b(brasilia|distrito federal|\\bdf\\b)\\b/i.test(normalizar(titulo + " " + texto));
+          const mencionaBrasilia = /\b(brasilia|distrito federal|df)\b/i.test(normalizar(titulo + " " + texto));
           if (!regioes.length && !mencionaBrasilia) {
             console.log(`REJEITADO (abrangência Brasília/DF não confirmada): ${titulo}`);
             continue;
