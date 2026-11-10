@@ -67,6 +67,27 @@
       "ativo": false,
       "tipo": "vagas",
       "observacao": "Marketplace de empregos identificado; rota pública de vagas retorna bloqueio HTTP 403 ao coletor. Manter desativada até validar acesso automatizado."
+    },
+    {
+      "nome": "Empregare — Brasília/DF",
+      "url": "https://www.empregare.com/pt-br/vagas-em-df",
+      "ativo": true,
+      "tipo": "vagas",
+      "observacao": "Listagem regional de vagas com anúncios individuais, data, salário, regime e descrição."
+    },
+    {
+      "nome": "InfoJobs — Brasília/DF",
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx",
+      "ativo": true,
+      "tipo": "vagas",
+      "observacao": "Listagem de vagas em Brasília/DF; validar anúncio individual e data de publicação."
+    },
+    {
+      "nome": "GRH DF / Empregare",
+      "url": "https://grhdf.empregare.com/pt-br",
+      "ativo": true,
+      "tipo": "vagas",
+      "observacao": "Portal regional com vagas do DF, incluindo estágios, salário e localidades."
     }
   ],
   "localidades_monitoradas": [
