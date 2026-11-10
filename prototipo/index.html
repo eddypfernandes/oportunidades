@@ -177,21 +177,21 @@
           <article class="card gc-card shadow-sm h-100">
             <div class="card-body p-4 p-xl-5 d-flex flex-column">
               <div class="d-flex flex-wrap gap-2 mb-3">
-                <span class="badge text-bg-success">\${exibir(vaga.tipo, "Oportunidade")}</span>
-                \${vaga.publicado_em ? '<span class="badge text-bg-light border">' + exibir(vaga.publicado_em) + '</span>' : '<span class="badge text-bg-warning">Data não informada</span>'}
+                <span class="badge text-bg-success">${exibir(vaga.tipo, "Oportunidade")}</span>
+                ${vaga.publicado_em ? '<span class="badge text-bg-light border">' + exibir(vaga.publicado_em) + '</span>' : '<span class="badge text-bg-warning">Data não informada</span>'}
               </div>
-              <h3 class="card-title h4 fw-bold mb-3">\${exibir(vaga.titulo, "Título não informado")}</h3>
-              <p class="mb-2"><strong>Cidade:</strong> \${exibir(vaga.cidade)} / \${exibir(vaga.uf)}</p>
-              <p class="mb-2"><strong>Salário:</strong> \${exibir(vaga.salario)}</p>
-              <p class="card-text gc-suave mb-4"><strong>Resumo:</strong> \${exibir(vaga.resumo, "Descrição não informada.")}</p>
+              <h3 class="card-title h4 fw-bold mb-3">${exibir(vaga.titulo, "Título não informado")}</h3>
+              <p class="mb-2"><strong>Cidade:</strong> ${exibir(vaga.cidade)} / ${exibir(vaga.uf)}</p>
+              <p class="mb-2"><strong>Salário:</strong> ${exibir(vaga.salario)}</p>
+              <p class="card-text gc-suave mb-4"><strong>Resumo:</strong> ${exibir(vaga.resumo, "Descrição não informada.")}</p>
               <div class="mt-auto pt-3 d-flex flex-wrap align-items-center gap-2">
-                <a class="btn btn-gc" href="\${linkSeguro}" target="_blank" rel="noopener">Publicação original</a>
-                <a class="btn btn-outline-secondary" href="\${detalhe}">Ficha completa</a>
+                <a class="btn btn-gc" href="${linkSeguro}" target="_blank" rel="noopener">Publicação original</a>
+                <a class="btn btn-outline-secondary" href="${detalhe}">Ficha completa</a>
               </div>
-              <div class="small gc-suave mt-3">Fonte: \${exibir(vaga.fonte)}</div>
+              <div class="small gc-suave mt-3">Fonte: ${exibir(vaga.fonte)}</div>
             </div>
             <footer class="gc-localidades px-4 py-3">
-              <span class="fw-semibold">Localidade:</span> \${exibir(vaga.localidade)}
+              <span class="fw-semibold">Localidade:</span> ${exibir(vaga.localidade)}
             </footer>
           </article>`;
         slides.appendChild(slide);
