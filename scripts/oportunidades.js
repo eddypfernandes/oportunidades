@@ -232,7 +232,7 @@ function extrairAtividades(html, texto) {
   const rotulada = extrairCampoRotulado(texto, "(?:principais\\s+)?atividades(?:\\s+e\\s+responsabilidades)?|responsabilidades");
   if (rotulada) return rotulada;
   const paragrafos = extrairParagrafos(html);
-  const acoes = /^(apoio|atualização|realizar|atender|auxiliar|executar|prestar|organizar|desenvolver|elaborar|controlar|acompanhar|participar|atuar|responsável|contribuir|monitorar|analisar|instalar|manter)\\b/i;
+  const acoes = /^(apoio|atualização|realizar|atender|auxiliar|executar|prestar|organizar|desenvolver|elaborar|controlar|acompanhar|participar|atuar|responsável|contribuir|monitorar|analisar|instalar|manter)\b/i;
   const encontrados = paragrafos.filter(p => acoes.test(p) && p.length <= 260).slice(0, 4);
   return encontrados.length ? encontrados.join(" ") : null;
 }
@@ -242,18 +242,18 @@ function extrairTipoVaga(texto) {
   if (rotulado) return rotulado;
   const conteudo = String(texto || "");
   const tipos = [];
-  if (/\\bCLT\\b/i.test(conteudo)) tipos.push("CLT");
-  if (/\\btemporári[oa]\\b/i.test(conteudo)) tipos.push("Temporária");
-  if (/\\b(efetiv[oa]|prazo indeterminado)\\b/i.test(conteudo)) tipos.push("Efetiva");
-  if (/\\b(PJ|pessoa jurídica)\\b/i.test(conteudo)) tipos.push("Pessoa jurídica (PJ)");
+  if (/\bCLT\b/i.test(conteudo)) tipos.push("CLT");
+  if (/\btemporári[oa]\b/i.test(conteudo)) tipos.push("Temporária");
+  if (/\b(efetiv[oa]|prazo indeterminado)\b/i.test(conteudo)) tipos.push("Efetiva");
+  if (/\b(PJ|pessoa jurídica)\b/i.test(conteudo)) tipos.push("Pessoa jurídica (PJ)");
 return [...new Set(tipos)].join(" / ") || null;
 }
 
 function extrairJornada(texto) {
   const conteudo = String(texto || "");
-  const horario = conteudo.match(/\\b\\d{1,2}:\\d{2}\\s*(?:às|as|a|-)\\s*\\d{1,2}:\\d{2}\\b/i);
+  const horario = conteudo.match(/\b\d{1,2}:\d{2}\\s*(?:às|as|a|-)\\s*\d{1,2}:\d{2}\b/i);
   if (horario) return horario[0];
-  const carga = conteudo.match(/\\b\\d{1,2}\\s*(?:horas?|h)\\s*(?:por semana|semanais|diárias)?\\b/i);
+  const carga = conteudo.match(/\b\d{1,2}\\s*(?:horas?|h)\\s*(?:por semana|semanais|diárias)?\b/i);
   if (carga) return carga[0];
   return extrairCampoRotulado(conteudo, "jornada(?:\\s+de\\s+trabalho)?|carga\\s+horária|horários?|expediente");
 }
