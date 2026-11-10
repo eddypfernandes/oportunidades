@@ -156,9 +156,9 @@
       if (dias !== null) {
         if (dias < 0) return false;
         const concurso = /concurso|edital|processo seletivo|selecao publica/i.test(vaga.titulo || "");
-        return dias <= (concurso ? 30 : 7);
+        return dias <= (concurso ? 30 : 14);
       }
-      return /carreiras\.iel\.org\.br\/DF\/vaga\//i.test(vaga.url || "");
+      return false;
     }
 
     function renderizar(vagas) {
@@ -224,7 +224,7 @@
           document.getElementById("vagasCarousel").classList.add("d-none");
           document.getElementById("mensagemDados").classList.remove("d-none");
           document.getElementById("mensagemDados").textContent = todas.length
-            ? "Nenhuma oportunidade possui data de publicação confirmada dentro do prazo de exibição. Nenhum exemplo demonstrativo será exibido como vaga real."
+            ? "Nenhuma oportunidade possui data confirmada e está dentro do prazo de exibição. Registros sem data não são apresentados como atuais."
             : "O repositório ainda não contém oportunidades reais para exibir.";
           document.getElementById("statusDados").className = "badge text-bg-secondary";
           document.getElementById("statusDados").textContent = "Sem oportunidades atuais";

@@ -19,8 +19,8 @@ function escaparRegex(texto) {
 }
 
 function carregarLocalidades(config) {
-  const termos = Array.isArray(config.termos_ampliados) ? config.termos_ampliados : [];
-  if (!termos.length) throw new Error("A lista termos_ampliados não foi encontrada em config.json.");
+  const termos = Array.isArray(config.localidades_monitoradas) ? config.localidades_monitoradas : [];
+  if (!termos.length) throw new Error("A lista localidades_monitoradas não foi encontrada em config.json.");
   return termos;
 }
 
@@ -141,16 +141,28 @@ function tituloGenerico(titulo, url) {
   return false;
 }
 
-function tituloIndicaOportunidade(titulo, fonte, url) {
+function tituloIndicaOportunidade(titulo, fonte, url, texto = "") {
   const t = normalizar(titulo);
-  const caminho = normalizar(url);
+  const tipo = normalizar(fonte.tipo || "");
   if (tituloGenerico(titulo, url)) return false;
 
-  const termos = /\b(vaga|vagas|emprego|empregos|oportunidade|oportunidades|estagio|aprendiz|aprendizagem|processo seletivo|concurso|concursos|edital|selecao publica|cadastro reserva|agencias do trabalhador|trabalhador|contratacao|bolsista|trainee|convocacao de aprovados)\b/;
-  const tipo = normalizar(fonte.tipo || "");
+  if (tipo === "vagas") {
+    const paginaIndividual = /\/vaga\//i.test(url);
+    const conteudoDeVaga = /\b(atividades|requisitos|candidatar|candidate-se|inscreva-se|bolsa|remuneracao|salario)\b/i.test(normalizar(texto));
+    const tituloValido = t.length >= 8 && !/^(estagio|aprendizagem|vagas|oportunidades|empregos?)$/.test(t);
+    return paginaIndividual && tituloValido && conteudoDeVaga;
+  }
 
-  if (termos.test(t)) return true;
-  if (tipo === "vagas" && /\/vaga\//i.test(caminho) && t.length > 12) return true;
+  if (tipo === "concursos") {
+    return /\b(edital|inscricoes abertas|inscricao ate|concurso publico|processo seletivo)\b/.test(t)
+      && !/concursos publicos$|concursos e provimento|autorizacao de concurso/.test(t);
+  }
+
+  if (tipo === "noticias_vagas") {
+    return /\b(vagas abertas|abre .*vagas|oferta .*vagas|selecao para .*vagas|processo seletivo para)\b/.test(t)
+      && !/evento|mutirao|feira|palestra|programacao/.test(t);
+  }
+
   return false;
 }
 
@@ -169,24 +181,21 @@ function tituloPagina(html) {
 }
 
 function dataPublicacao(html, textoPrincipal, url = "") {
-  const meta = html.match(/<meta[^>]+(?:property|name)=["'](?:article:published_time|datePublished|date)["'][^>]+content=["']([^"']+)["']/i)
-    || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["'](?:article:published_time|datePublished|date)["']/i)
-    || html.match(/<time[^>]+datetime=["']([^"']+)["']/i);
+  const meta = String(html || "").match(/<meta[^>]+(?:property|name)=["'](?:article:published_time|datePublished|datePosted|date)["'][^>]+content=["']([^"']+)["']/i)
+    || String(html || "").match(/<time[^>]+datetime=["']([^"']+)["']/i);
   if (meta) {
-    const dataMeta = meta[1].match(/^(\d{4}-\d{2}-\d{2})/);
-    if (dataMeta) return dataMeta[1];
+    const valor = meta[1].slice(0, 10);
+    if (/^\d{4}-\d{2}-\d{2}$/.test(valor) && !Number.isNaN(Date.parse(valor))) return valor;
   }
 
-  const dataIso = String(textoPrincipal || "").match(/\b(\d{4})-(\d{2})-(\d{2})\b/);
-  if (dataIso) return dataIso[0];
+  const jsonLd = String(html || "").match(/date(?:Published|Posted)["']\s*:\s*["'](\d{4}-\d{2}-\d{2})/i);
+  if (jsonLd && !Number.isNaN(Date.parse(jsonLd[1]))) return jsonLd[1];
 
-  // Só considera datas no início do conteúdo principal, onde portais costumam exibir a publicação.
-  const trechoInicial = String(textoPrincipal || "").slice(0, 500);
-  const dataVisivel = trechoInicial.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
-  if (!dataVisivel) return "";
-  const dia = dataVisivel[1].padStart(2, "0");
-  const mes = dataVisivel[2].padStart(2, "0");
-  return `${dataVisivel[3]}-${mes}-${dia}`;
+  const trechoInicial = String(textoPrincipal || "").slice(0, 700);
+  const visivel = trechoInicial.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
+  if (!visivel) return "";
+  const iso = visivel[3] + "-" + visivel[2].padStart(2, "0") + "-" + visivel[1].padStart(2, "0");
+  return Number.isNaN(Date.parse(iso)) ? "" : iso;
 }
 
 function urlAbsoluta(url, origem) {
@@ -199,12 +208,21 @@ function pareceConteudoDeVaga(texto) {
 
 function localizarRegioes(texto, localidades) {
   const conteudo = normalizar(texto);
-  return localidades
-    .filter(local => {
-      const termo = escaparRegex(local);
-      return new RegExp(`(^|[^a-z0-9])${termo}([^a-z0-9]|$)`).test(conteudo);
-    })
-    .sort((a, b) => b.length - a.length);
+  return localidades.filter(local => {
+    const termo = escaparRegex(local);
+    return new RegExp(`(^|[^a-z0-9])${termo}([^a-z0-9]|$)`).test(conteudo);
+  }).sort((a, b) => b.length - a.length);
+}
+
+function dataDentroDaValidade(data, tipo) {
+  if (!data || !/^\\d{4}-\\d{2}-\\d{2}$/.test(data)) return false;
+  const publicada = new Date(data + "T00:00:00Z");
+  if (Number.isNaN(publicada.getTime())) return false;
+  const hoje = new Date();
+  const inicioHoje = Date.UTC(hoje.getUTCFullYear(), hoje.getUTCMonth(), hoje.getUTCDate());
+  const dias = Math.floor((inicioHoje - publicada.getTime()) / 86400000);
+  const limite = normalizar(tipo) === "concursos" ? 30 : 14;
+  return dias >= 0 && dias <= limite;
 }
 
 function extrairLinks(html, fonte) {
@@ -271,17 +289,26 @@ async function executar() {
         try {
           const artigo = await baixar(link.url);
           const titulo = tituloPagina(artigo) || link.titulo;
-          if (!tituloIndicaOportunidade(titulo, fonte, link.url)) {
+          const htmlPrincipal = extrairConteudoPrincipal(artigo);
+          const texto = textoLimpo(htmlPrincipal);
+          if (!tituloIndicaOportunidade(titulo, fonte, link.url, texto)) {
             console.log(`REJEITADO (título genérico ou sem sinal de oportunidade): ${titulo}`);
             continue;
           }
 
-          const htmlPrincipal = extrairConteudoPrincipal(artigo);
-          const texto = textoLimpo(htmlPrincipal);
           if (!pareceConteudoDeVaga(titulo + " " + texto)) continue;
 
+          const publicadoEm = dataPublicacao(artigo, texto, link.url);
+          if (!dataDentroDaValidade(publicadoEm, fonte.tipo)) {
+            console.log(`REJEITADO (data ausente ou fora da validade): ${titulo}`);
+            continue;
+          }
+
           const regioes = localizarRegioes(titulo + " " + texto, localidades);
-          if (!regioes.length) continue;
+          if (!regioes.length) {
+            console.log(`REJEITADO (localidade específica não confirmada): ${titulo}`);
+            continue;
+          }
 
           const chave = link.url.replace(/\/$/, "");
           if (candidatos.has(chave)) continue;
@@ -293,7 +320,7 @@ async function executar() {
             localidade: regioes.join(", "),
             resumo: descricao.resumo || resumir(texto, titulo),
             descricao: descricao.descricao,
-            publicado_em: dataPublicacao(artigo, texto, link.url),
+            publicado_em: publicadoEm,
             url: link.url,
             fonte: fonte.nome
           });
