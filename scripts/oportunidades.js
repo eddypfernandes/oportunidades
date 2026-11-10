@@ -19,9 +19,7 @@ function escaparRegex(texto) {
 }
 
 function carregarLocalidades(config) {
-  const termos = Array.isArray(config.localidades_monitoradas) ? config.localidades_monitoradas : [];
-  if (!termos.length) throw new Error("A lista localidades_monitoradas não foi encontrada em config.json.");
-  return termos;
+  return Array.isArray(config.localidades_monitoradas) ? config.localidades_monitoradas : [];
 }
 
 function baixar(url) {
@@ -322,8 +320,9 @@ async function executar() {
           }
 
           const regioes = localizarRegioes(titulo + " " + texto, localidades);
-          if (!regioes.length) {
-            console.log(`REJEITADO (localidade específica não confirmada): ${titulo}`);
+          const mencionaBrasilia = /\\b(brasilia|distrito federal|\\bdf\\b)\\b/i.test(normalizar(titulo + " " + texto));
+          if (!regioes.length && !mencionaBrasilia) {
+            console.log(`REJEITADO (abrangência Brasília/DF não confirmada): ${titulo}`);
             continue;
           }
 
@@ -338,7 +337,7 @@ async function executar() {
             titulo,
             cidade: localidade.cidade || null,
             uf: localidade.estado || null,
-            localidade: regioes.join(", "),
+            localidade: regioes.filter(r => !["Brasília","Distrito Federal"].includes(r)).join(", ") || "Brasília/DF",
             resumo: resumo || null,
             salario: extrairSalario(texto),
             publicado_em: publicadoEm,
