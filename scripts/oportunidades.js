@@ -143,24 +143,23 @@ function tituloGenerico(titulo, url) {
 
 function tituloIndicaOportunidade(titulo, fonte, url, texto = "") {
   const t = normalizar(titulo);
-  const caminho = normalizar(url);
   const tipo = normalizar(fonte.tipo || "");
   if (tituloGenerico(titulo, url)) return false;
 
   if (tipo === "vagas") {
-    const paginaIndividual = /\\/vaga\\//i.test(caminho);
-    const conteudoDeVaga = /\\b(atividades|requisitos|candidatar|candidate-se|inscreva-se|bolsa|remuneracao|salario)\\b/i.test(normalizar(texto));
+    const paginaIndividual = /\/vaga\//i.test(url);
+    const conteudoDeVaga = /\b(atividades|requisitos|candidatar|candidate-se|inscreva-se|bolsa|remuneracao|salario)\b/i.test(normalizar(texto));
     const tituloValido = t.length >= 8 && !/^(estagio|aprendizagem|vagas|oportunidades|empregos?)$/.test(t);
     return paginaIndividual && tituloValido && conteudoDeVaga;
   }
 
   if (tipo === "concursos") {
-    return /\\b(edital|inscricoes abertas|inscricao ate|concurso publico|processo seletivo)\\b/.test(t)
+    return /\b(edital|inscricoes abertas|inscricao ate|concurso publico|processo seletivo)\b/.test(t)
       && !/concursos publicos$|concursos e provimento|autorizacao de concurso/.test(t);
   }
 
   if (tipo === "noticias_vagas") {
-    return /\\b(vagas abertas|abre .*vagas|oferta .*vagas|selecao para .*vagas|processo seletivo para)\\b/.test(t)
+    return /\b(vagas abertas|abre .*vagas|oferta .*vagas|selecao para .*vagas|processo seletivo para)\b/.test(t)
       && !/evento|mutirao|feira|palestra|programacao/.test(t);
   }
 
