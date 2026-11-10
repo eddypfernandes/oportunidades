@@ -214,8 +214,25 @@ function localizarRegioes(texto, localidades) {
   }).sort((a, b) => b.length - a.length);
 }
 
+function extrairSalario(texto) {
+  const conteudo = String(texto || "").replace(/\s+/g, " ");
+  const valor = conteudo.match(/R\$\s?\d{1,3}(?:\.\d{3})*(?:,\d{2})?(?:\s*(?:a|até|-)\s*R?\$?\s?\d{1,3}(?:\.\d{3})*(?:,\d{2})?)?/i);
+  if (valor) return valor[0].replace(/\s+/g, " ").trim();
+
+  const combinado = conteudo.match(/\b(?:sal[aá]rio|remunera[cç][aã]o|bolsa)\s*[:\-]?\s*(a combinar|compat[ií]vel com o mercado|negoci[aá]vel)\b/i);
+  return combinado ? combinado[1] : null;
+}
+
+function classificarTipo(titulo, texto, tipoFonte) {
+  const conteudo = normalizar(titulo + " " + texto);
+  if (normalizar(tipoFonte) === "concursos") return "Concurso público";
+  if (/\b(jovem aprendiz|aprendizagem|aprendiz)\b/.test(conteudo)) return "Jovem aprendiz";
+  if (/\b(estagio|estagiario|estagiaria)\b/.test(conteudo)) return "Estágio";
+  return "Vaga de emprego";
+}
+
 function dataDentroDaValidade(data, tipo) {
-  if (!data || !/^\\d{4}-\\d{2}-\\d{2}$/.test(data)) return false;
+  if (!data || !/^\d{4}-\d{2}-\d{2}$/.test(data)) return false;
   const publicada = new Date(data + "T00:00:00Z");
   if (Number.isNaN(publicada.getTime())) return false;
   const hoje = new Date();
@@ -314,15 +331,20 @@ async function executar() {
           if (candidatos.has(chave)) continue;
 
           const descricao = construirDescricao(htmlPrincipal, titulo, texto);
+          const resumo = descricao.resumo || resumir(texto, titulo);
+          const localidade = config.localidade || {};
           candidatos.set(chave, {
+            tipo: classificarTipo(titulo, texto, fonte.tipo),
             titulo,
-            empresa: fonte.nome,
+            cidade: localidade.cidade || null,
+            uf: localidade.estado || null,
             localidade: regioes.join(", "),
-            resumo: descricao.resumo || resumir(texto, titulo),
-            descricao: descricao.descricao,
+            resumo: resumo || null,
+            salario: extrairSalario(texto),
             publicado_em: publicadoEm,
-            url: link.url,
-            fonte: fonte.nome
+            fonte: fonte.nome,
+            link_original: link.url,
+            descricao: descricao.descricao
           });
           console.log(`ACEITO: ${titulo} [${regioes.join(", ")}]`);
         } catch (erro) {
@@ -338,7 +360,7 @@ async function executar() {
     .sort((a, b) => (b.publicado_em || "").localeCompare(a.publicado_em || ""))
     .slice(0, Number(config.quantidade) || 20);
 
-  const resultado = { atualizado_em: new Date().toISOString(), items };
+  const resultado = { versao_estrutura: 2, atualizado_em: new Date().toISOString(), items };
   fs.mkdirSync("data", { recursive: true });
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(resultado, null, 2) + "\n", "utf8");
   console.log(`\nArtigos relevantes confirmados: ${items.length}`);
