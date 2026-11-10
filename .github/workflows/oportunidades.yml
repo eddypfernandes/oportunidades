@@ -14,7 +14,7 @@ on:
 permissions:
   contents: write
 
-# Evita que duas coletas publiquem no mesmo branch ao mesmo tempo.
+# Serializa as coletas deste workflow.
 concurrency:
   group: oportunidades-main-write
   cancel-in-progress: false
@@ -25,6 +25,9 @@ jobs:
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
@@ -34,17 +37,68 @@ jobs:
       - name: Executar coleta
         run: node scripts/oportunidades.js
 
-      - name: Publicar JSON
+      - name: Preservar resultado da coleta
+        run: cp data/oportunidades.json /tmp/oportunidades-coletadas.json
+
+      - name: Mesclar e publicar sem perder atualizações concorrentes
+        shell: bash
         run: |
+          set -e
           git config user.name "GUIA COMERCIAL"
           git config user.email "guia-comercial-bot@users.noreply.github.com"
-          git add data/oportunidades.json
-          if git diff --cached --quiet; then
-            echo "Nenhuma alteração nas oportunidades."
-          else
-            git commit -m "Atualizar oportunidades de emprego"
-            # Sincroniza com commits feitos no GitHub antes de publicar; nunca força a atualização.
+
+          for tentativa in 1 2 3 4 5; do
+            echo "Publicação — tentativa $tentativa de 5"
             git fetch origin main
-            git rebase origin/main
-            git push origin HEAD:main
-          fi
+            git reset --hard origin/main
+
+            node <<'NODE'
+          const fs = require("fs");
+          const atualPath = "data/oportunidades.json";
+          const coletaPath = "/tmp/oportunidades-coletadas.json";
+          const atual = JSON.parse(fs.readFileSync(atualPath, "utf8"));
+          const coleta = JSON.parse(fs.readFileSync(coletaPath, "utf8"));
+
+          const registros = new Map();
+          for (const item of (atual.items || [])) {
+            const chave = item.link_original || item.url;
+            if (chave) registros.set(chave, item);
+          }
+          for (const item of (coleta.items || [])) {
+            const chave = item.link_original || item.url;
+            if (chave) registros.set(chave, item);
+          }
+
+          const items = [...registros.values()]
+            .sort((a, b) => (b.publicado_em || "").localeCompare(a.publicado_em || ""))
+            .slice(0, 40);
+
+          const mudou = JSON.stringify(items) !== JSON.stringify(atual.items || []);
+          const resultado = {
+            versao_estrutura: 2,
+            atualizado_em: mudou ? (coleta.atualizado_em || new Date().toISOString()) : atual.atualizado_em,
+            items
+          };
+
+          fs.writeFileSync(atualPath, JSON.stringify(resultado, null, 2) + "\n", "utf8");
+          console.log("Registros preservados/mesclados:", items.length);
+          console.log("Novos dados ou alterações:", mudou ? "sim" : "não");
+          NODE
+
+            git add data/oportunidades.json
+            if git diff --cached --quiet; then
+              echo "Nenhuma oportunidade nova ou alterada."
+              exit 0
+            fi
+
+            git commit -m "Atualizar oportunidades de emprego"
+            if git push origin HEAD:main; then
+              echo "Dados publicados com sucesso."
+              exit 0
+            fi
+
+            echo "A branch main avançou durante a publicação; mesclando novamente."
+          done
+
+          echo "Falha: não foi possível publicar após 5 tentativas."
+          exit 1
