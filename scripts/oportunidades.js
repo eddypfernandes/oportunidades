@@ -182,24 +182,27 @@ function tituloPagina(html) {
 }
 
 function dataPublicacao(html, textoPrincipal, url = "") {
-  const meta = html.match(/<meta[^>]+(?:property|name)=["'](?:article:published_time|datePublished|date)["'][^>]+content=["']([^"']+)["']/i)
-    || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["'](?:article:published_time|datePublished|date)["']/i)
+  const meta = html.match(/<meta[^>]+(?:property|name)=["'](?:article:published_time|datePublished|datePosted|date)["'][^>]+content=["']([^"']+)["']/i)
+    || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["'](?:article:published_time|datePublished|datePosted|date)["']/i)
     || html.match(/<time[^>]+datetime=["']([^"']+)["']/i);
   if (meta) {
-    const dataMeta = meta[1].match(/^(\d{4}-\d{2}-\d{2})/);
-    if (dataMeta) return dataMeta[1];
+    const dataMeta = meta[1].match(/^(\\d{4}-\\d{2}-\\d{2})/);
+    if (dataMeta && !Number.isNaN(Date.parse(dataMeta[1]))) return dataMeta[1];
   }
 
-  const dataIso = String(textoPrincipal || "").match(/\b(\d{4})-(\d{2})-(\d{2})\b/);
-  if (dataIso) return dataIso[0];
+  const jsonLd = String(html || "").match(/"(?:datePublished|datePosted)"\\s*:\\s*"([^"]+)"/i);
+  if (jsonLd) {
+    const dataJson = jsonLd[1].match(/^(\\d{4}-\\d{2}-\\d{2})/);
+    if (dataJson && !Number.isNaN(Date.parse(dataJson[1]))) return dataJson[1];
+  }
 
-  // Só considera datas no início do conteúdo principal, onde portais costumam exibir a publicação.
-  const trechoInicial = String(textoPrincipal || "").slice(0, 500);
-  const dataVisivel = trechoInicial.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
+  const trechoInicial = String(textoPrincipal || "").slice(0, 700);
+  const dataVisivel = trechoInicial.match(/\\b(\\d{1,2})\\/(\\d{1,2})\\/(\\d{4})\\b/);
   if (!dataVisivel) return "";
   const dia = dataVisivel[1].padStart(2, "0");
   const mes = dataVisivel[2].padStart(2, "0");
-  return `${dataVisivel[3]}-${mes}-${dia}`;
+  const iso = `${dataVisivel[3]}-${mes}-${dia}`;
+  return Number.isNaN(Date.parse(iso)) ? "" : iso;
 }
 
 function urlAbsoluta(url, origem) {
