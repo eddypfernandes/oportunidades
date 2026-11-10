@@ -21,10 +21,10 @@
     },
     {
       "nome": "CIEE",
-      "url": "https://portal.ciee.org.br/quero-uma-vaga/estagio/",
+      "url": "https://ciee.gupy.io/",
       "ativo": true,
       "tipo": "vagas",
-      "observacao": "Estágio, aprendizagem, PCD e processos públicos; páginas e localidades são verificadas."
+      "observacao": "Vagas publicadas no portal oficial de carreiras do CIEE; páginas individuais e localidades são verificadas."
     },
     {
       "nome": "Secretaria de Economia do DF — Concursos",
