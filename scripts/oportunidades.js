@@ -225,7 +225,8 @@ function extrairCampoRotulado(texto, rotulo) {
   const labels = "(?:atividades|principais atividades|responsabilidades|tipo de vaga|contrato|regime de contratação|jornada de trabalho|jornada|carga horária|horário|horários|expediente)";
   const regex = new RegExp("(?:^|\\s)" + rotulo + "\\s*[:\\-]\\s*(.{5,220}?)(?=\\s+" + labels + "\\s*[:\\-]|$)", "i");
   const match = String(texto || "").match(regex);
-  const valor = match && typeof match[1] === "string" ? match[1].trim() : "";\n  return valor ? limitarSemCortarPalavra(valor, 220) : null;
+  const valor = match && typeof match[1] === "string" ? match[1].trim() : "";
+  return valor ? limitarSemCortarPalavra(valor, 220) : null;
 }
 
 function extrairAtividades(html, texto) {
