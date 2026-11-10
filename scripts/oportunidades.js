@@ -181,26 +181,20 @@ function tituloPagina(html) {
 }
 
 function dataPublicacao(html, textoPrincipal, url = "") {
-  const meta = html.match(/<meta[^>]+(?:property|name)=["'](?:article:published_time|datePublished|datePosted|date)["'][^>]+content=["']([^"']+)["']/i)
-    || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["'](?:article:published_time|datePublished|datePosted|date)["']/i)
-    || html.match(/<time[^>]+datetime=["']([^"']+)["']/i);
+  const meta = String(html || "").match(/<meta[^>]+(?:property|name)=["'](?:article:published_time|datePublished|datePosted|date)["'][^>]+content=["']([^"']+)["']/i)
+    || String(html || "").match(/<time[^>]+datetime=["']([^"']+)["']/i);
   if (meta) {
-    const dataMeta = meta[1].match(/^(\\d{4}-\\d{2}-\\d{2})/);
-    if (dataMeta && !Number.isNaN(Date.parse(dataMeta[1]))) return dataMeta[1];
+    const valor = meta[1].slice(0, 10);
+    if (/^\d{4}-\d{2}-\d{2}$/.test(valor) && !Number.isNaN(Date.parse(valor))) return valor;
   }
 
-  const jsonLd = String(html || "").match(/"(?:datePublished|datePosted)"\\s*:\\s*"([^"]+)"/i);
-  if (jsonLd) {
-    const dataJson = jsonLd[1].match(/^(\\d{4}-\\d{2}-\\d{2})/);
-    if (dataJson && !Number.isNaN(Date.parse(dataJson[1]))) return dataJson[1];
-  }
+  const jsonLd = String(html || "").match(/date(?:Published|Posted)["']\s*:\s*["'](\d{4}-\d{2}-\d{2})/i);
+  if (jsonLd && !Number.isNaN(Date.parse(jsonLd[1]))) return jsonLd[1];
 
   const trechoInicial = String(textoPrincipal || "").slice(0, 700);
-  const dataVisivel = trechoInicial.match(/\\b(\\d{1,2})\\/(\\d{1,2})\\/(\\d{4})\\b/);
-  if (!dataVisivel) return "";
-  const dia = dataVisivel[1].padStart(2, "0");
-  const mes = dataVisivel[2].padStart(2, "0");
-  const iso = `${dataVisivel[3]}-${mes}-${dia}`;
+  const visivel = trechoInicial.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
+  if (!visivel) return "";
+  const iso = visivel[3] + "-" + visivel[2].padStart(2, "0") + "-" + visivel[1].padStart(2, "0");
   return Number.isNaN(Date.parse(iso)) ? "" : iso;
 }
 
