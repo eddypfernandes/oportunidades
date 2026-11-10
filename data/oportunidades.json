@@ -1,5 +1,5 @@
 {
-  "versao_estrutura": 2,
+  "versao_estrutura": 3,
   "atualizado_em": "2026-11-10T10:07:35.927Z",
   "items": [
     {
@@ -8,20 +8,13 @@
       "cidade": "Brasília",
       "uf": "DF",
       "localidade": "Guará",
-      "resumo": "Trocar Localização Distrito Federal Nossos serviços Acesso Candidato Acesso Empresa Ciência da Computação/Análise de Sistemas ou similar Voltar ao site Ciência da Computação/Análise de Sistemas ou similar Cód.",
+      "atividades": "Apoio à configuração e instalação de softwares. Atualização das informações do parque tecnológico.",
+      "tipo_vaga": null,
+      "jornada_trabalho": "08:00 às 14:00 Formato de trabalho: Presencial Faça login e se candidate Compartilhe nas redes sociais Está buscando uma oportunidade para aplicar seus conhecimentos teóricos na prática e desenvolver habilidades essenciais para o mundo profissional? Acesso Candidato (61) 3362-6060 SIA Trecho 3 Ed",
       "salario": null,
       "publicado_em": "2026-10-28",
       "fonte": "IEL Distrito Federal",
-      "link_original": "https://carreiras.iel.org.br/DF/vaga/vagas-destinadas-a-aprendizagem-de-cursos/32636/ciencia-da-computacao-analise-de-sistemas-ou-similar",
-      "descricao": [
-        "Trocar Localização Distrito Federal Nossos serviços Acesso Candidato Acesso Empresa Ciência da Computação/Análise de Sistemas ou similar Voltar ao site Ciência da Computação/Análise de Sistemas ou similar Cód.",
-        "Apoio à configuração e instalação de softwares.",
-        "Atualização das informações do parque tecnológico.",
-        "Requisitos: Estar cursando a partir do 2° semestre; Informática básica.",
-        "Cursos: CIÊNCIA DA COMPUTAÇÃO Escolaridade: Ensino Superior/Graduação Incompleto Horários: 08:00 às 14:00 Formato de trabalho: Presencial Faça login e se candidate Compartilhe nas redes sociais Está buscando uma oportunidade para aplicar seus conhecimentos teóricos na prática e desenvolver habilidades essenciais para o mundo profissional?",
-        "Acesso Candidato (61) 3362-6060 SIA Trecho 3 Ed.",
-        "Fibra - Guará, Brasília - DF, 71200-030 Sobre o IEL Por que estagiar Contato"
-      ]
+      "link_original": "https://carreiras.iel.org.br/DF/vaga/vagas-destinadas-a-aprendizagem-de-cursos/32636/ciencia-da-computacao-analise-de-sistemas-ou-similar"
     }
   ]
 }
