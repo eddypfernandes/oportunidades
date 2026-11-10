@@ -57,9 +57,12 @@
                     </div>
                   </div>
                 </div>
-                <h2 class="h5 fw-bold mt-4">Resumo descritivo</h2>
-                <p id="resumo" class="mb-3">Carregando dados do repositório.</p>
-                <div id="descricao" class="mb-4"></div>
+                <h2 class="h5 fw-bold mt-4">Atividades</h2>
+                <p id="atividades" class="mb-4">Carregando dados do repositório.</p>
+                <div class="row g-3 mb-4">
+                  <div class="col-12 col-md-6"><div class="border rounded-3 p-3 h-100"><div class="small gc-suave">Tipo de vaga</div><div id="tipoVaga" class="fw-semibold">Não informado</div></div></div>
+                  <div class="col-12 col-md-6"><div class="border rounded-3 p-3 h-100"><div class="small gc-suave">Jornada de trabalho</div><div id="jornadaTrabalho" class="fw-semibold">Não informado</div></div></div>
+                </div>
                 <div class="row g-3">
                   <div class="col-12 col-md-6">
                     <div class="border rounded-3 p-3 h-100">
@@ -134,8 +137,9 @@
           document.getElementById("localidade").textContent = "Dados não disponíveis";
           document.getElementById("selo").textContent = "Sem dados válidos";
           document.getElementById("selo").className = "badge text-bg-secondary";
-          document.getElementById("resumo").textContent = "Esta oportunidade não está disponível no período atual ou não possui uma data de publicação confirmada.";
-          document.getElementById("descricao").textContent = "";
+          document.getElementById("atividades").textContent = "Não informado";
+          document.getElementById("tipoVaga").textContent = "Não informado";
+          document.getElementById("jornadaTrabalho").textContent = "Não informado";
           aviso.textContent = "Nenhum conteúdo demonstrativo foi exibido. Volte à lista e selecione uma oportunidade válida.";
           aviso.classList.remove("d-none");
           document.getElementById("dataPublicacao").textContent = "Não confirmada";
@@ -148,17 +152,9 @@
         mostrarTexto("cidade", [vaga.cidade, vaga.uf].filter(Boolean).join(" / "), "Não informada");
         mostrarTexto("salario", vaga.salario, "Não informado");
         mostrarTexto("localidade", vaga.localidade, "Distrito Federal");
-        mostrarTexto("resumo", vaga.resumo, "Consulte a publicação original para obter mais informações.");
-
-        const descricao = document.getElementById("descricao");
-        descricao.innerHTML = "";
-        const paragrafos = Array.isArray(vaga.descricao) ? vaga.descricao : [];
-        paragrafos.slice(0, 8).forEach(texto => {
-          const p = document.createElement("p");
-          p.className = "mb-3";
-          p.textContent = texto;
-          descricao.appendChild(p);
-        });
+        mostrarTexto("atividades", vaga.atividades);
+        mostrarTexto("tipoVaga", vaga.tipo_vaga);
+        mostrarTexto("jornadaTrabalho", vaga.jornada_trabalho);
 
         mostrarTexto("dataPublicacao", vaga.publicado_em, "Data não informada");
         mostrarTexto("fonte", vaga.fonte);
@@ -174,7 +170,9 @@
       } catch (erro) {
         document.getElementById("titulo").textContent = "Não foi possível carregar a oportunidade";
         document.getElementById("tipo").textContent = "Tipo não informado";
-        document.getElementById("resumo").textContent = "Os dados reais não puderam ser carregados. Tente novamente mais tarde.";
+        document.getElementById("atividades").textContent = "Não foi possível carregar os dados.";
+        document.getElementById("tipoVaga").textContent = "Não informado";
+        document.getElementById("jornadaTrabalho").textContent = "Não informado";
         document.getElementById("selo").textContent = "Falha ao carregar";
         document.getElementById("selo").className = "badge text-bg-danger";
         aviso.textContent = "O protótipo não substitui uma falha de leitura por conteúdo demonstrativo.";
