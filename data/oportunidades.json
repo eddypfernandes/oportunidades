@@ -1,7 +1,22 @@
 {
-  "versao_estrutura": 3,
-  "atualizado_em": "2026-11-10T21:23:08.905Z",
+  "versao_estrutura": 4,
+  "atualizado_em": "2026-11-10T22:25:56.289Z",
   "items": [
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga Analista Fiscal I na Alldax - Grupo 3/SA | EMPREGARE.com",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Brasília/DF",
+      "atividades": null,
+      "tipo_vaga": "CLT",
+      "jornada_trabalho": null,
+      "salario": "R$ 3.811,54",
+      "publicado_em": "2026-11-10",
+      "fonte": "Empregare — Brasília/DF",
+      "link_original": "https://www.empregare.com/pt-br/vaga-analista-fiscal-i_188369",
+      "adicionado_em": "2026-11-10T22:25:56.289Z"
+    },
     {
       "tipo": "Vaga de emprego",
       "titulo": "Vaga: SDR — Gestão Comercial",
@@ -11,10 +26,11 @@
       "atividades": null,
       "tipo_vaga": null,
       "jornada_trabalho": null,
-      "salario": "R$ 4.150,00 a R$ 7.880,00",
+      "salario": "R$ 3.000,00 a R$ 3.500,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-sdr-gestao-comercial-em-distrito-federal__12206689.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-sdr-gestao-comercial-em-distrito-federal__12206689.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Vaga de emprego",
@@ -28,21 +44,23 @@
       "salario": "R$ 1.883,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-recepcionista-recepcionista-academia-em-distrito-federal__12206644.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-recepcionista-recepcionista-academia-em-distrito-federal__12206644.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Vaga de emprego",
       "titulo": "Vaga: Recepcionista - Salao De Beleza",
       "cidade": "Brasília",
       "uf": "DF",
-      "localidade": "Asa Norte",
+      "localidade": "Asa Norte, Asa Sul",
       "atividades": null,
       "tipo_vaga": null,
       "jornada_trabalho": null,
-      "salario": "R$ 2.000,00 a R$ 3.000,00",
+      "salario": "R$ 1.700,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-recepcionista-salao-beleza-em-distrito-federal__12206593.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-recepcionista-salao-beleza-em-distrito-federal__12206593.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -56,7 +74,8 @@
       "salario": null,
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-recepcionistas-em-distrito-federal__12205374.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-recepcionistas-em-distrito-federal__12205374.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Vaga de emprego",
@@ -70,10 +89,11 @@
       "salario": "R$ 1.790,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-auxiliar-loja-em-distrito-federal__12206123.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-auxiliar-loja-em-distrito-federal__12206123.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
-      "tipo": "Jovem aprendiz",
+      "tipo": "Vaga de emprego",
       "titulo": "Vaga: Serviços Gerais",
       "cidade": "Brasília",
       "uf": "DF",
@@ -81,10 +101,11 @@
       "atividades": null,
       "tipo_vaga": null,
       "jornada_trabalho": null,
-      "salario": "R$ 1.862,00",
+      "salario": "R$ 1.000,00 a R$ 2.000,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-servicos-gerais-em-distrito-federal__12206006.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-servicos-gerais-em-distrito-federal__12206006.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -98,7 +119,8 @@
       "salario": "R$ 2.000,00 a R$ 5.000,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-aprendiz-sams-brasilia-sia-em-distrito-federal__12205946.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-aprendiz-sams-brasilia-sia-em-distrito-federal__12205946.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Vaga de emprego",
@@ -109,10 +131,11 @@
       "atividades": null,
       "tipo_vaga": null,
       "jornada_trabalho": null,
-      "salario": "R$ 2.367,00",
+      "salario": "R$ 1.000,00 a R$ 2.000,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-auxiliar-servicos-gerais-em-distrito-federal__12205847.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-auxiliar-servicos-gerais-em-distrito-federal__12205847.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Estágio",
@@ -126,7 +149,8 @@
       "salario": "R$ 780,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-estagiarioa-musculacao-brasilia-df-em-distrito-federal__12205819.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-estagiarioa-musculacao-brasilia-df-em-distrito-federal__12205819.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Vaga de emprego",
@@ -140,35 +164,38 @@
       "salario": "R$ 1.700,00 a R$ 1.790,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-assistente-vendas-assistente-loja-em-distrito-federal__12205738.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-assistente-vendas-assistente-loja-em-distrito-federal__12205738.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Vaga de emprego",
       "titulo": "Vaga: Analista Pleno De E-Commerce E Marketplace",
       "cidade": "Brasília",
       "uf": "DF",
-      "localidade": "SIA",
+      "localidade": "Santa Maria",
       "atividades": null,
       "tipo_vaga": "CLT / Temporária / Efetiva",
       "jornada_trabalho": null,
       "salario": "R$ 1.900,00 a R$ 1.908,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-analista-pleno-commerce-marketplace-em-distrito-federal__12205723.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-analista-pleno-commerce-marketplace-em-distrito-federal__12205723.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Estágio",
       "titulo": "Vaga: Operador De Loja (Caixa/Repositor) - Brasilia Venancio",
       "cidade": "Brasília",
       "uf": "DF",
-      "localidade": "Águas Claras",
+      "localidade": "Brasília/DF",
       "atividades": null,
       "tipo_vaga": null,
       "jornada_trabalho": null,
       "salario": "R$ 1.681,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-operador-loja-caixarepositor-brasilia-venancio-em-distrito-federal__12205242.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-operador-loja-caixarepositor-brasilia-venancio-em-distrito-federal__12205242.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Vaga de emprego",
@@ -179,10 +206,11 @@
       "atividades": null,
       "tipo_vaga": null,
       "jornada_trabalho": null,
-      "salario": "R$ 1.681,00",
+      "salario": "R$ 1.300,00 a R$ 1.600,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-gerente-loja-em-distrito-federal__12205207.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-gerente-loja-em-distrito-federal__12205207.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Vaga de emprego",
@@ -193,24 +221,26 @@
       "atividades": null,
       "tipo_vaga": null,
       "jornada_trabalho": null,
-      "salario": "R$ 1.681,00",
+      "salario": "R$ 1.300,00 a R$ 1.600,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-vendedora-kopenhagen-shopping-iguatemi-brasilia-em-distrito-federal__12205073.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-vendedora-kopenhagen-shopping-iguatemi-brasilia-em-distrito-federal__12205073.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Vaga de emprego",
       "titulo": "Vaga: Promovendedor Jr | Canal Farma",
       "cidade": "Brasília",
       "uf": "DF",
-      "localidade": "Taguatinga, Lago Sul",
+      "localidade": "Taguatinga",
       "atividades": null,
       "tipo_vaga": null,
       "jornada_trabalho": null,
-      "salario": "R$ 2.620,00 a R$ 3.926,00",
+      "salario": "R$ 9.096,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-promovendedor-jr-canal-farma-em-distrito-federal__12204866.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-promovendedor-jr-canal-farma-em-distrito-federal__12204866.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Vaga de emprego",
@@ -224,7 +254,8 @@
       "salario": "R$ 5.100,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-supervisor-obras-em-distrito-federal__12204838.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-supervisor-obras-em-distrito-federal__12204838.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Vaga de emprego",
@@ -238,7 +269,8 @@
       "salario": "R$ 2.258,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-assistente-comercial-em-distrito-federal__12204776.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-assistente-comercial-em-distrito-federal__12204776.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Estágio",
@@ -252,35 +284,38 @@
       "salario": "R$ 750,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-tecnico-operacoes-junior-em-distrito-federal__12204771.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-tecnico-operacoes-junior-em-distrito-federal__12204771.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
-      "tipo": "Jovem aprendiz",
+      "tipo": "Vaga de emprego",
       "titulo": "Vaga: DIGITADOR (A) - BRASÍLIA - DF",
       "cidade": "Brasília",
       "uf": "DF",
-      "localidade": "Brasília/DF",
+      "localidade": "Águas Claras",
       "atividades": null,
       "tipo_vaga": null,
       "jornada_trabalho": "07h",
-      "salario": "R$ 2.534,00",
+      "salario": "R$ 1.700,00 a R$ 2.200,00",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-digitador-brasilia-df-em-distrito-federal__12204730.aspx"
+      "link_original": "https://www.infojobs.com.br/vaga-de-digitador-brasilia-df-em-distrito-federal__12204730.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Vaga de emprego",
       "titulo": "Vaga Analista Financeiro I na Alldax - Grupo 3/SA | EMPREGARE.com",
       "cidade": "Brasília",
       "uf": "DF",
-      "localidade": "Brasília/DF",
+      "localidade": "Taguatinga",
       "atividades": null,
       "tipo_vaga": "CLT",
       "jornada_trabalho": null,
       "salario": "R$ 3.811,54",
       "publicado_em": "2026-11-10",
       "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-analista-financeiro-i_188367"
+      "link_original": "https://www.empregare.com/pt-br/vaga-analista-financeiro-i_188367",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Vaga de emprego",
@@ -294,7 +329,8 @@
       "salario": null,
       "publicado_em": "2026-11-10",
       "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-assistente-comercial_188272"
+      "link_original": "https://www.empregare.com/pt-br/vaga-assistente-comercial_188272",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Vaga de emprego",
@@ -308,7 +344,8 @@
       "salario": null,
       "publicado_em": "2026-11-10",
       "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-assistente-administrativo-logistica_188234"
+      "link_original": "https://www.empregare.com/pt-br/vaga-assistente-administrativo-logistica_188234",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -322,7 +359,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-brasilia,-df-trabalho-home-office.aspx"
+      "link_original": "https://www.infojobs.com.br/empregos-em-brasilia,-df-trabalho-home-office.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -336,7 +374,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-brasilia,-df.aspx?campo=griddate&amp;orden=desc"
+      "link_original": "https://www.infojobs.com.br/empregos-em-brasilia,-df.aspx?campo=griddate&amp;orden=desc",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -350,7 +389,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-brasilia,-df.aspx?campo=distance&amp;orden=asc"
+      "link_original": "https://www.infojobs.com.br/empregos-em-brasilia,-df.aspx?campo=distance&amp;orden=asc",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -364,7 +404,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12205242"
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12205242",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -378,7 +419,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-distrito-federal.aspx"
+      "link_original": "https://www.infojobs.com.br/empregos-em-distrito-federal.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -392,7 +434,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-samambaia,-df.aspx"
+      "link_original": "https://www.infojobs.com.br/empregos-em-samambaia,-df.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -406,7 +449,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-recanto-emas,-df.aspx"
+      "link_original": "https://www.infojobs.com.br/empregos-em-recanto-emas,-df.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -420,7 +464,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-taguatinga,-df.aspx"
+      "link_original": "https://www.infojobs.com.br/empregos-em-taguatinga,-df.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -434,7 +479,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-lago-norte,-df.aspx"
+      "link_original": "https://www.infojobs.com.br/empregos-em-lago-norte,-df.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -448,7 +494,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-planaltina,-df.aspx"
+      "link_original": "https://www.infojobs.com.br/empregos-em-planaltina,-df.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -462,7 +509,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-guara,-df.aspx"
+      "link_original": "https://www.infojobs.com.br/empregos-em-guara,-df.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -476,7 +524,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-gama,-df.aspx"
+      "link_original": "https://www.infojobs.com.br/empregos-em-gama,-df.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -490,7 +539,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-sao-sebastiao,-df.aspx"
+      "link_original": "https://www.infojobs.com.br/empregos-em-sao-sebastiao,-df.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -504,7 +554,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-lago-sul,-df.aspx"
+      "link_original": "https://www.infojobs.com.br/empregos-em-lago-sul,-df.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -518,7 +569,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-nucleo-bandeirante,-df.aspx"
+      "link_original": "https://www.infojobs.com.br/empregos-em-nucleo-bandeirante,-df.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -532,7 +584,8 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-riacho-fundo,-df.aspx"
+      "link_original": "https://www.infojobs.com.br/empregos-em-riacho-fundo,-df.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
     },
     {
       "tipo": "Jovem aprendiz",
@@ -546,21 +599,14 @@
       "salario": "R$1.000",
       "publicado_em": "2026-11-10",
       "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-ceilandia,-df.aspx"
-    },
+      "link_original": "https://www.infojobs.com.br/empregos-em-ceilandia,-df.aspx",
+      "adicionado_em": "2026-11-10T21:23:08.905Z"
+    }
+  ],
+  "expiradas": [
     {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Sobradinho - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-10",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-sobradinho,-df.aspx"
+      "url": "https://www.infojobs.com.br/empregos-em-sobradinho,-df.aspx",
+      "expirada_em": "2026-11-10T22:25:56.535Z"
     }
   ]
 }
