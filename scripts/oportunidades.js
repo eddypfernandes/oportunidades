@@ -221,6 +221,44 @@ function extrairSalario(texto) {
   return combinado ? combinado[1] : null;
 }
 
+function extrairCampoRotulado(texto, rotulo) {
+  const labels = "(?:atividades|principais atividades|responsabilidades|tipo de vaga|contrato|regime de contratação|jornada de trabalho|jornada|carga horária|horário|horários|expediente)";
+  const regex = new RegExp("(?:^|\\s)" + rotulo + "\\s*[:\\-]\\s*(.{5,220}?)(?=\\s+" + labels + "\\s*[:\\-]|$)", "i");
+  const match = String(texto || "").match(regex);
+  return match ? limitarSemCortarPalavra(match[1].trim(), 220) : null;
+}
+
+function extrairAtividades(html, texto) {
+  const rotulada = extrairCampoRotulado(texto, "(?:principais\\s+)?atividades(?:\\s+e\\s+responsabilidades)?|responsabilidades");
+  if (rotulada) return rotulada;
+  const paragrafos = extrairParagrafos(html);
+  const acoes = /^(apoio|atualização|realizar|atender|auxiliar|executar|prestar|organizar|desenvolver|elaborar|controlar|acompanhar|participar|atuar|responsável|contribuir|monitorar|analisar|instalar|manter)\\b/i;
+  const encontrados = paragrafos.filter(p => acoes.test(p) && p.length <= 260).slice(0, 4);
+  return encontrados.length ? encontrados.join(" ") : null;
+}
+
+function extrairTipoVaga(texto) {
+  const rotulado = extrairCampoRotulado(texto, "tipo\\s+de\\s+vaga|regime\\s+de\\s+contratação|contrato");
+  if (rotulado) return rotulado;
+  const conteudo = String(texto || "");
+  const tipos = [];
+  if (/\\bCLT\\b/i.test(conteudo)) tipos.push("CLT");
+  if (/\\btemporári[oa]\\b/i.test(conteudo)) tipos.push("Temporária");
+  if (/\\b(efetiv[oa]|prazo indeterminado)\\b/i.test(conteudo)) tipos.push("Efetiva");
+  if (/\\b(PJ|pessoa jurídica)\\b/i.test(conteudo)) tipos.push("Pessoa jurídica (PJ)");
+  if (/\\b(estágio)\\b/i.test(conteudo)) tipos.push("Estágio");
+  if (/\\b(aprendiz(?:agem)?)\\b/i.test(conteudo)) tipos.push("Aprendiz");
+  return [...new Set(tipos)].join(" / ") || null;
+}
+
+function extrairJornada(texto) {
+  const rotulada = extrairCampoRotulado(texto, "jornada(?:\\s+de\\s+trabalho)?|carga\\s+horária|horários?|expediente");
+  if (rotulada) return rotulada;
+  const horario = String(texto || "").match(/\\b\\d{1,2}:\\d{2}\\s*(?:às|as|a|-)\\s*\\d{1,2}:\\d{2}\\b/i);
+  const carga = String(texto || "").match(/\\b\\d{1,2}\\s*(?:horas?|h)\\s*(?:por semana|semanais|diárias)?\\b/i);
+  return horario ? horario[0] : (carga ? carga[0] : null);
+}
+
 function classificarTipo(titulo, texto, tipoFonte) {
   const conteudo = normalizar(titulo + " " + texto);
   if (normalizar(tipoFonte) === "concursos") return "Concurso público";
@@ -329,8 +367,9 @@ async function executar() {
           const chave = link.url.replace(/\/$/, "");
           if (candidatos.has(chave)) continue;
 
-          const descricao = construirDescricao(htmlPrincipal, titulo, texto);
-          const resumo = descricao.resumo || resumir(texto, titulo);
+          const atividades = extrairAtividades(htmlPrincipal, texto);
+          const tipoVaga = extrairTipoVaga(texto);
+          const jornadaTrabalho = extrairJornada(texto);
           const localidade = config.localidade || {};
           candidatos.set(chave, {
             tipo: classificarTipo(titulo, texto, fonte.tipo),
@@ -338,12 +377,13 @@ async function executar() {
             cidade: localidade.cidade || null,
             uf: localidade.estado || null,
             localidade: regioes.filter(r => !["Brasília","Distrito Federal"].includes(r)).join(", ") || "Brasília/DF",
-            resumo: resumo || null,
+            atividades,
+            tipo_vaga: tipoVaga,
+            jornada_trabalho: jornadaTrabalho,
             salario: extrairSalario(texto),
             publicado_em: publicadoEm,
             fonte: fonte.nome,
-            link_original: link.url,
-            descricao: descricao.descricao
+            link_original: link.url
           });
           console.log(`ACEITO: ${titulo} [${regioes.join(", ")}]`);
         } catch (erro) {
@@ -359,7 +399,7 @@ async function executar() {
     .sort((a, b) => (b.publicado_em || "").localeCompare(a.publicado_em || ""))
     .slice(0, Number(config.quantidade) || 20);
 
-  const resultado = { versao_estrutura: 2, atualizado_em: new Date().toISOString(), items };
+  const resultado = { versao_estrutura: 3, atualizado_em: new Date().toISOString(), items };
   fs.mkdirSync("data", { recursive: true });
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(resultado, null, 2) + "\n", "utf8");
   console.log(`\nArtigos relevantes confirmados: ${items.length}`);
