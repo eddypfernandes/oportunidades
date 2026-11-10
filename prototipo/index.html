@@ -144,21 +144,11 @@
       return unicas.length ? unicas.join(" · ") : "Distrito Federal";
     }
 
-    function diasDesdePublicacao(vaga) {
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(String(vaga.publicado_em || ""))) return null;
-      const data = new Date(vaga.publicado_em + "T00:00:00");
-      if (Number.isNaN(data.getTime())) return null;
-      return Math.floor((new Date().setHours(0, 0, 0, 0) - data.getTime()) / 86400000);
-    }
-
     function oportunidadeAtual(vaga) {
-      const dias = diasDesdePublicacao(vaga);
-      if (dias !== null) {
-        if (dias < 0) return false;
-        const concurso = /concurso|edital|processo seletivo|selecao publica/i.test(vaga.titulo || "");
-        return dias <= (concurso ? 30 : 14);
-      }
-      return false;
+      const adicionada = Date.parse(vaga.adicionado_em || "");
+      const idadeMaxima = 72 * 60 * 60 * 1000;
+      const idade = Date.now() - adicionada;
+      return Number.isFinite(adicionada) && idade >= 0 && idade < idadeMaxima;
     }
 
     function renderizar(vagas) {
