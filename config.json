@@ -46,6 +46,27 @@
       "ativo": false,
       "tipo": "consulta_manual",
       "observacao": "Portal oficial de consulta individual; não foi ativado para raspagem automática porque depende de serviços e dados de perfil."
+    },
+    {
+      "nome": "Indeed",
+      "url": "https://br.indeed.com/empregos-em-BSB",
+      "ativo": true,
+      "tipo": "vagas",
+      "observacao": "Listagens de emprego em Brasília/DF; cada anúncio é aberto e validado individualmente."
+    },
+    {
+      "nome": "NetVagas",
+      "url": "https://www.netvagas.com.br/",
+      "ativo": true,
+      "tipo": "vagas",
+      "observacao": "Agregador de plataformas de recrutamento; validar anúncios individuais, data, localidade e duplicidade."
+    },
+    {
+      "nome": "Catho",
+      "url": "https://www.catho.com.br/vagas/",
+      "ativo": false,
+      "tipo": "vagas",
+      "observacao": "Marketplace de empregos identificado; rota pública de vagas retorna bloqueio HTTP 403 ao coletor. Manter desativada até validar acesso automatizado."
     }
   ],
   "localidades_monitoradas": [
