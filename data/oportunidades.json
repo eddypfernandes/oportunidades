@@ -1,7 +1,22 @@
 {
   "versao_estrutura": 4,
-  "atualizado_em": "2026-11-11T03:06:52.401Z",
+  "atualizado_em": "2026-11-11T10:59:34.470Z",
   "items": [
+    {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-11",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12177626",
+      "adicionado_em": "2026-11-11T10:59:34.470Z"
+    },
     {
       "tipo": "Jovem aprendiz",
       "titulo": "Vagas de Emprego em Brazlândia - DF",
@@ -586,21 +601,6 @@
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/empregos-em-nucleo-bandeirante,-df.aspx",
       "adicionado_em": "2026-11-10T21:23:08.905Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Riacho Fundo - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-11",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/empregos-em-riacho-fundo,-df.aspx",
-      "adicionado_em": "2026-11-10T21:23:08.905Z"
     }
   ],
   "expiradas": [
@@ -699,6 +699,10 @@
     {
       "url": "https://www.empregare.com/pt-br/vaga-assistente-administrativo-logistica_188234",
       "expirada_em": "2026-11-11T03:06:52.654Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/empregos-em-riacho-fundo,-df.aspx",
+      "expirada_em": "2026-11-11T10:59:34.863Z"
     }
   ]
 }
