@@ -1,17 +1,17 @@
 {
   "versao_estrutura": 4,
-  "atualizado_em": "2026-11-14T19:15:28.989Z",
+  "atualizado_em": "2026-11-14T23:03:10.338Z",
   "items": [
     {
       "tipo": "Vaga de emprego",
       "titulo": "Vaga: Vendedor Externo - Médico Hospitalar #1040",
       "cidade": "Brasília",
       "uf": "DF",
-      "localidade": "Guará",
+      "localidade": "Brasília/DF",
       "atividades": null,
-      "tipo_vaga": null,
+      "tipo_vaga": "CLT",
       "jornada_trabalho": null,
-      "salario": "R$ 1.800,00 a R$ 2.500,00",
+      "salario": "R$ 1.996,00",
       "publicado_em": "2026-11-14",
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vaga-de-vendedor-externo-medico-hospitalar-1040-em-distrito-federal__12220130.aspx",
