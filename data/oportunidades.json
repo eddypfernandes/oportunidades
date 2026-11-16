@@ -1,6 +1,6 @@
 {
   "versao_estrutura": 4,
-  "atualizado_em": "2026-11-15T21:51:40.097Z",
+  "atualizado_em": "2026-11-16T01:31:15.996Z",
   "items": [
     {
       "tipo": "Vaga de emprego",
@@ -27,7 +27,7 @@
       "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
       "jornada_trabalho": null,
       "salario": "R$1.000",
-      "publicado_em": "2026-11-15",
+      "publicado_em": "2026-11-16",
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12219637",
       "adicionado_em": "2026-11-13T23:58:17.346Z"
@@ -42,7 +42,7 @@
       "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
       "jornada_trabalho": null,
       "salario": "R$1.000",
-      "publicado_em": "2026-11-15",
+      "publicado_em": "2026-11-16",
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12219518",
       "adicionado_em": "2026-11-13T23:58:17.346Z"
@@ -451,156 +451,6 @@
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vaga-de-promotor-merchandising-df-em-distrito-federal__12216042.aspx",
       "adicionado_em": "2026-11-13T18:35:48.437Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga Consultor de Vendas - Closer na VITORHIA RECURSOS HUMANOS LTDA | EMPREGARE.com",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": "CLT",
-      "jornada_trabalho": null,
-      "salario": "R$ 3.200",
-      "publicado_em": "2026-11-12",
-      "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-consultor-de-vendas-closer-comercial-exe_188810",
-      "adicionado_em": "2026-11-12T22:48:38.863Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga ANALISTA DE OBRAS - ( BRASILIA - DF ) | EMPREGARE.com",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Taguatinga",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": null,
-      "publicado_em": "2026-11-12",
-      "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-analista-de-obras-brasilia-df_188775",
-      "adicionado_em": "2026-11-12T22:48:38.863Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: OFICIAL DE MANUTENCAO",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Asa Norte",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": "07h",
-      "salario": "R$ 1.840,00 a R$ 2.100,00",
-      "publicado_em": "2026-11-12",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-oficial-manutencao-em-distrito-federal__12215634.aspx",
-      "adicionado_em": "2026-11-12T22:48:38.863Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: CFO – CHIEF FINANCIAL OFFICER",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 9.000,00",
-      "publicado_em": "2026-11-12",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-cfo-chief-financial-officer-em-distrito-federal__12215555.aspx",
-      "adicionado_em": "2026-11-12T22:48:38.863Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Supervisor De Autosserviço C",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 9.096,00",
-      "publicado_em": "2026-11-12",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-supervisor-autosservico-c-em-distrito-federal__12215532.aspx",
-      "adicionado_em": "2026-11-12T22:48:38.863Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Auxiliar De Produção - Auxiliar De Costura",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": "Auxiliar nos processos de produção, prestar apoio aos colegas de trabalho, organizar e etiquetar peças. Manter o ambiente sempre limpo e organizado.",
-      "tipo_vaga": "Temporária",
-      "jornada_trabalho": null,
-      "salario": "R$ 1.800,00 a R$ 2.100,00",
-      "publicado_em": "2026-11-12",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-auxiliar-producao-auxiliar-costura-em-distrito-federal__12215207.aspx",
-      "adicionado_em": "2026-11-12T22:48:38.863Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vaga: Costureira",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": "Efetiva",
-      "jornada_trabalho": "07:30 às 17:00",
-      "salario": "R$ 2.450,00",
-      "publicado_em": "2026-11-12",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-costureira-em-distrito-federal__12215126.aspx",
-      "adicionado_em": "2026-11-12T22:48:38.863Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vaga: Assistente Administrativo",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 1.000,00 a R$ 1.621,00",
-      "publicado_em": "2026-11-12",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-assistente-administrativo-em-distrito-federal__12214648.aspx",
-      "adicionado_em": "2026-11-12T22:48:38.863Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Confeiteiro (A)",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 2.120,00",
-      "publicado_em": "2026-11-12",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-confeiteiro-a-em-distrito-federal__12214080.aspx",
-      "adicionado_em": "2026-11-12T22:48:38.863Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: AUXILIAR DE PROJETISTA- BRASÍLIA/DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 3.000,00",
-      "publicado_em": "2026-11-12",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-auxiliar-projetista-brasiliadf-em-distrito-federal__12214068.aspx",
-      "adicionado_em": "2026-11-12T22:48:38.863Z"
     }
   ],
   "expiradas": [
@@ -1067,6 +917,46 @@
     {
       "url": "https://www.infojobs.com.br/vaga-de-vendedor-autonomo-em-distrito-federal__12213926.aspx",
       "expirada_em": "2026-11-14T19:15:29.393Z"
+    },
+    {
+      "url": "https://www.empregare.com/pt-br/vaga-consultor-de-vendas-closer-comercial-exe_188810",
+      "expirada_em": "2026-11-16T01:31:16.382Z"
+    },
+    {
+      "url": "https://www.empregare.com/pt-br/vaga-analista-de-obras-brasilia-df_188775",
+      "expirada_em": "2026-11-16T01:31:16.382Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-oficial-manutencao-em-distrito-federal__12215634.aspx",
+      "expirada_em": "2026-11-16T01:31:16.382Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-cfo-chief-financial-officer-em-distrito-federal__12215555.aspx",
+      "expirada_em": "2026-11-16T01:31:16.382Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-supervisor-autosservico-c-em-distrito-federal__12215532.aspx",
+      "expirada_em": "2026-11-16T01:31:16.382Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-auxiliar-producao-auxiliar-costura-em-distrito-federal__12215207.aspx",
+      "expirada_em": "2026-11-16T01:31:16.382Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-costureira-em-distrito-federal__12215126.aspx",
+      "expirada_em": "2026-11-16T01:31:16.382Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-assistente-administrativo-em-distrito-federal__12214648.aspx",
+      "expirada_em": "2026-11-16T01:31:16.382Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-confeiteiro-a-em-distrito-federal__12214080.aspx",
+      "expirada_em": "2026-11-16T01:31:16.382Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-auxiliar-projetista-brasiliadf-em-distrito-federal__12214068.aspx",
+      "expirada_em": "2026-11-16T01:31:16.382Z"
     }
   ]
 }
