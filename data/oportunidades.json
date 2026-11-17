@@ -1,7 +1,37 @@
 {
   "versao_estrutura": 4,
-  "atualizado_em": "2026-11-17T02:33:47.546Z",
+  "atualizado_em": "2026-11-17T11:14:54.216Z",
   "items": [
+    {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-17",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12132578",
+      "adicionado_em": "2026-11-17T11:14:54.216Z"
+    },
+    {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-17",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12223850",
+      "adicionado_em": "2026-11-17T11:14:54.216Z"
+    },
     {
       "tipo": "Jovem aprendiz",
       "titulo": "Vagas de Emprego em Brasília - DF",
