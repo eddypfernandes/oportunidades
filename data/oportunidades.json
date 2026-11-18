@@ -1,7 +1,52 @@
 {
   "versao_estrutura": 4,
-  "atualizado_em": "2026-11-18T02:30:39.627Z",
+  "atualizado_em": "2026-11-18T10:50:06.177Z",
   "items": [
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga: Concierge Hospitalar - Grande Rede Hospitalar - Asa Sul (DF)",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Asa Sul",
+      "atividades": null,
+      "tipo_vaga": "Temporário – Cobertura de férias (30 dias) Escala: Segunda a sexta-feira (5x2)",
+      "jornada_trabalho": "08h",
+      "salario": "R$ 2.000,00 a R$ 3.000,00",
+      "publicado_em": "2026-11-18",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vaga-de-concierge-hospitalar-grande-rede-hospitalar-asa-sul-df-em-distrito-federal__12229765.aspx",
+      "adicionado_em": "2026-11-18T10:50:06.177Z"
+    },
+    {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-18",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12229765",
+      "adicionado_em": "2026-11-18T10:50:06.177Z"
+    },
+    {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-18",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12195640",
+      "adicionado_em": "2026-11-18T10:50:06.177Z"
+    },
     {
       "tipo": "Jovem aprendiz",
       "titulo": "Vagas de Emprego em Brasília - DF",
@@ -555,51 +600,6 @@
       "publicado_em": "2026-11-16",
       "fonte": "Empregare — Brasília/DF",
       "link_original": "https://www.empregare.com/pt-br/vaga-jovem-aprendiz-recursos-humanos_189023",
-      "adicionado_em": "2026-11-16T19:00:54.111Z"
-    },
-    {
-      "tipo": "Estágio",
-      "titulo": "Vaga Estágio em Publicidade e Propaganda, Marketing ou Áreas correlatas na Stag - Central de Estágios | EMPREGARE.com",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 1.200",
-      "publicado_em": "2026-11-16",
-      "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-estagio-em-publicidade-e-propaganda-mark_188994",
-      "adicionado_em": "2026-11-16T19:00:54.111Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: ASSISTENTE ADMINISTRATIVO DE FACILITIES",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Taguatinga, Guará",
-      "atividades": null,
-      "tipo_vaga": "CLT",
-      "jornada_trabalho": null,
-      "salario": "R$ 2.500,00 a R$ 3.500,00",
-      "publicado_em": "2026-11-16",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-assistente-administrativo-facilities-em-distrito-federal__12223639.aspx",
-      "adicionado_em": "2026-11-16T19:00:54.111Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Caixa Repositor - Aeroporto De Brasília",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Asa Norte",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 1.700,00",
-      "publicado_em": "2026-11-16",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-caixa-repositor-aeroporto-brasilia-em-distrito-federal__12223434.aspx",
       "adicionado_em": "2026-11-16T19:00:54.111Z"
     }
   ],
@@ -1303,6 +1303,18 @@
     {
       "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12152061",
       "expirada_em": "2026-11-17T19:56:04.356Z"
+    },
+    {
+      "url": "https://www.empregare.com/pt-br/vaga-estagio-em-publicidade-e-propaganda-mark_188994",
+      "expirada_em": "2026-11-18T10:50:06.555Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-assistente-administrativo-facilities-em-distrito-federal__12223639.aspx",
+      "expirada_em": "2026-11-18T10:50:06.555Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-caixa-repositor-aeroporto-brasilia-em-distrito-federal__12223434.aspx",
+      "expirada_em": "2026-11-18T10:50:06.555Z"
     }
   ]
 }
