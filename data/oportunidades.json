@@ -1,7 +1,67 @@
 {
   "versao_estrutura": 4,
-  "atualizado_em": "2026-11-18T19:10:50.662Z",
+  "atualizado_em": "2026-11-19T01:17:26.255Z",
   "items": [
+    {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-19",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12233919",
+      "adicionado_em": "2026-11-19T01:17:26.255Z"
+    },
+    {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego de Executivo Comercial em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Recanto das Emas, Santa Maria, Lago Norte, Taguatinga, Planaltina, Sobradinho, Ceilândia, Lago Sul, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-19",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-de-executivo-comercial-em-brasilia,-df.aspx",
+      "adicionado_em": "2026-11-19T01:17:26.255Z"
+    },
+    {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-19",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12232194",
+      "adicionado_em": "2026-11-18T19:10:50.662Z"
+    },
+    {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-19",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12232186",
+      "adicionado_em": "2026-11-18T19:10:50.662Z"
+    },
     {
       "tipo": "Vaga de emprego",
       "titulo": "Vaga Arrumadeira na PRINCIPAL | EMPREGARE.com",
@@ -168,21 +228,6 @@
       "adicionado_em": "2026-11-18T19:10:50.662Z"
     },
     {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-18",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12232194",
-      "adicionado_em": "2026-11-18T19:10:50.662Z"
-    },
-    {
       "tipo": "Vaga de emprego",
       "titulo": "Vaga: Consultor De Relacionamento - Agendamento De Consultas E Exames",
       "cidade": "Brasília",
@@ -195,21 +240,6 @@
       "publicado_em": "2026-11-18",
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vaga-de-consultor-relacionamento-agendamento-consultas-exames-em-distrito-federal__12232186.aspx",
-      "adicionado_em": "2026-11-18T19:10:50.662Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-18",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12232186",
       "adicionado_em": "2026-11-18T19:10:50.662Z"
     },
     {
@@ -570,36 +600,6 @@
       "publicado_em": "2026-11-17",
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vaga-de-encarregado-obra-em-distrito-federal__12228569.aspx",
-      "adicionado_em": "2026-11-17T19:56:03.989Z"
-    },
-    {
-      "tipo": "Estágio",
-      "titulo": "Vaga: Tecnico Em Enfermagem",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Lago Sul, Asa Sul",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": "6 horas ",
-      "salario": "R$ 2.775,00",
-      "publicado_em": "2026-11-17",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-tecnico-enfermagem-em-distrito-federal__12228568.aspx",
-      "adicionado_em": "2026-11-17T19:56:03.989Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: John John - Gerente De Loja | Partage",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Taguatinga",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": null,
-      "publicado_em": "2026-11-17",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-john-john-gerente-loja-partage-em-distrito-federal__12227973.aspx",
       "adicionado_em": "2026-11-17T19:56:03.989Z"
     }
   ],
@@ -1427,6 +1427,14 @@
     {
       "url": "https://www.empregare.com/pt-br/vaga-jovem-aprendiz-recursos-humanos_189023",
       "expirada_em": "2026-11-18T19:10:50.985Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-tecnico-enfermagem-em-distrito-federal__12228568.aspx",
+      "expirada_em": "2026-11-19T01:17:26.481Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-john-john-gerente-loja-partage-em-distrito-federal__12227973.aspx",
+      "expirada_em": "2026-11-19T01:17:26.481Z"
     }
   ]
 }
