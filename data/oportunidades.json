@@ -1,7 +1,52 @@
 {
   "versao_estrutura": 4,
-  "atualizado_em": "2026-11-20T16:12:45.492Z",
+  "atualizado_em": "2026-11-20T22:45:02.744Z",
   "items": [
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga: Auxiliar De Loja - Temporário - Shopping Conjunto Nacional",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Brasília/DF",
+      "atividades": null,
+      "tipo_vaga": null,
+      "jornada_trabalho": null,
+      "salario": "R$ 1.900,00 a R$ 3.500,00",
+      "publicado_em": "2026-11-20",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vaga-de-auxiliar-loja-temporario-shopping-conjunto-nacional-em-distrito-federal__12238828.aspx",
+      "adicionado_em": "2026-11-20T22:45:02.744Z"
+    },
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga: Mecânico De Bicicletas II - BPVC - Brasilia",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Asa Norte, Asa Sul",
+      "atividades": null,
+      "tipo_vaga": null,
+      "jornada_trabalho": "07h",
+      "salario": "R$ 1.840,00 a R$ 2.100,00",
+      "publicado_em": "2026-11-20",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vaga-de-mecanico-bicicletas-ii-bpvc-brasilia-em-distrito-federal__12238829.aspx",
+      "adicionado_em": "2026-11-20T22:45:02.744Z"
+    },
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga: Vendedor - Temporário - Shopping Conjunto Nacional",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Brasília/DF",
+      "atividades": null,
+      "tipo_vaga": null,
+      "jornada_trabalho": null,
+      "salario": "R$ 3.000,00 a R$ 7.000,00",
+      "publicado_em": "2026-11-20",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vaga-de-vendedor-temporario-shopping-conjunto-nacional-em-distrito-federal__12238825.aspx",
+      "adicionado_em": "2026-11-20T22:45:02.744Z"
+    },
     {
       "tipo": "Vaga de emprego",
       "titulo": "Vaga: [Mauro Menezes & Advogados] Assistente De Marketing",
@@ -11,7 +56,7 @@
       "atividades": null,
       "tipo_vaga": null,
       "jornada_trabalho": null,
-      "salario": "R$ 4.297,00",
+      "salario": "R$ 1.800,00 a R$ 2.000,00",
       "publicado_em": "2026-11-20",
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vaga-de-mauro-menezes-advogados-assistente-marketing-em-distrito-federal__12238462.aspx",
@@ -555,51 +600,6 @@
       "publicado_em": "2026-11-19",
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12234688",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Auxiliar De Vendas",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 2.157,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-auxiliar-vendas-em-distrito-federal__12234460.aspx",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12234460",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Brasília DF / Executivo De Relacionamento",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 5.000,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-brasilia-df-executivo-relacionamento-em-distrito-federal__12234416.aspx",
       "adicionado_em": "2026-11-19T17:47:36.869Z"
     }
   ],
@@ -1607,6 +1607,18 @@
     {
       "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12196785",
       "expirada_em": "2026-11-20T07:15:46.765Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-auxiliar-vendas-em-distrito-federal__12234460.aspx",
+      "expirada_em": "2026-11-20T22:45:03.094Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12234460",
+      "expirada_em": "2026-11-20T22:45:03.094Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-brasilia-df-executivo-relacionamento-em-distrito-federal__12234416.aspx",
+      "expirada_em": "2026-11-20T22:45:03.094Z"
     }
   ]
 }
