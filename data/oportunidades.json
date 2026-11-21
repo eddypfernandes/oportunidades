@@ -1,6 +1,6 @@
 {
   "versao_estrutura": 4,
-  "atualizado_em": "2026-11-20T22:45:02.744Z",
+  "atualizado_em": "2026-11-21T03:33:45.061Z",
   "items": [
     {
       "tipo": "Vaga de emprego",
@@ -48,6 +48,36 @@
       "adicionado_em": "2026-11-20T22:45:02.744Z"
     },
     {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-21",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12238358",
+      "adicionado_em": "2026-11-20T07:15:46.536Z"
+    },
+    {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-21",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12236992",
+      "adicionado_em": "2026-11-20T07:15:46.536Z"
+    },
+    {
       "tipo": "Vaga de emprego",
       "titulo": "Vaga: [Mauro Menezes & Advogados] Assistente De Marketing",
       "cidade": "Brasília",
@@ -72,37 +102,7 @@
       "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
       "jornada_trabalho": null,
       "salario": "R$1.000",
-      "publicado_em": "2026-11-20",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12238358",
-      "adicionado_em": "2026-11-20T07:15:46.536Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-20",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12236992",
-      "adicionado_em": "2026-11-20T07:15:46.536Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-20",
+      "publicado_em": "2026-11-21",
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12237345",
       "adicionado_em": "2026-11-19T23:55:03.473Z"
@@ -117,7 +117,7 @@
       "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
       "jornada_trabalho": null,
       "salario": "R$1.000",
-      "publicado_em": "2026-11-20",
+      "publicado_em": "2026-11-21",
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12237262",
       "adicionado_em": "2026-11-19T23:55:03.473Z"
