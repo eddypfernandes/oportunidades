@@ -1,7 +1,22 @@
 {
   "versao_estrutura": 4,
-  "atualizado_em": "2026-11-22T14:59:37.112Z",
+  "atualizado_em": "2026-11-22T21:07:19.418Z",
   "items": [
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga: SALADEIRA",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Brasília/DF",
+      "atividades": null,
+      "tipo_vaga": null,
+      "jornada_trabalho": "14:40 às 23:00",
+      "salario": "R$ 1.900,00 a R$ 2.100,00",
+      "publicado_em": "2026-11-22",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vaga-de-saladeira-em-distrito-federal__12239392.aspx",
+      "adicionado_em": "2026-11-22T21:07:19.418Z"
+    },
     {
       "tipo": "Jovem aprendiz",
       "titulo": "Vagas de Emprego Home office em Brasília - DF",
@@ -376,231 +391,6 @@
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vaga-de-atendente-petz-brasilia-jardim-botanico-em-distrito-federal__12236337.aspx",
       "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga Consultor(a) de Viagem Sênior Bilingue na Voetur Viagens | EMPREGARE.com",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Taguatinga",
-      "atividades": null,
-      "tipo_vaga": "CLT",
-      "jornada_trabalho": null,
-      "salario": "R$ 5.100",
-      "publicado_em": "2026-11-19",
-      "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-consultor-a-de-viagem-senior-bilingue-pl_189663",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Estágio",
-      "titulo": "Vaga ESTÁGIO EM ENGENHARIA ELÉTRICA / ENGENHARIA DE ENERGIA na Grupo Setec | EMPREGARE.com",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Taguatinga",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 1.200",
-      "publicado_em": "2026-11-19",
-      "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-estagio-em-engenharia-eletrica-engenhari_189659",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Estágio",
-      "titulo": "Vaga ESTÁGIO EM ENGENHARIA CIVIL na Direcional Engenharia | EMPREGARE.com",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Taguatinga",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 2.020",
-      "publicado_em": "2026-11-19",
-      "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-estagio-em-engenharia-civil_189655",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga Analista de Faturamento - DF na G&E SERVICOS TERCEIRIZADOS LTDA | EMPREGARE.com",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": "CLT",
-      "jornada_trabalho": null,
-      "salario": "R$ 4.149",
-      "publicado_em": "2026-11-19",
-      "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-analista-de-faturamento-df_189609",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga AUXILIAR OPERACIONAL na BSB LOCADORA DE VEICULOS LTDA | EMPREGARE.com",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Taguatinga",
-      "atividades": null,
-      "tipo_vaga": "CLT",
-      "jornada_trabalho": null,
-      "salario": "R$ 1.829",
-      "publicado_em": "2026-11-19",
-      "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-auxiliar-operacional_189588",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Auxiliar De Limpeza - Petz Brasília Asa Norte",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Taguatinga, Asa Norte, Asa Sul",
-      "atividades": null,
-      "tipo_vaga": "CLT (Efetivo) ?? Ramo de atividade: PRODUTOS PET ?? Cargo: Auxiliar de Limpeza ??",
-      "jornada_trabalho": null,
-      "salario": "R$ 2.071,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-auxiliar-limpeza-petz-brasilia-asa-norte-em-distrito-federal__12236198.aspx",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: ASSISTENTE DE LOJA - Parkshopping",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Taguatinga",
-      "atividades": null,
-      "tipo_vaga": "Temporária",
-      "jornada_trabalho": null,
-      "salario": null,
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-assistente-loja-parkshopping-em-distrito-federal__12236027.aspx",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12236027",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Professor (A) De Musculação - Unidade Paranoa - Brasília/DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Jardim Botânico, Lago Sul, Paranoá",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": null,
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-professor-musculacao-unidade-paranoa-brasiliadf-em-distrito-federal__12235925.aspx",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: GERENTE UNIDADE OPERACIONAL I - UAN",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 3.500,00 a R$ 4.500,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-gerente-unidade-operacional-i-uan-em-distrito-federal__12235715.aspx",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Promotor Dermocosméticos",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Taguatinga, Asa Norte, Guará",
-      "atividades": null,
-      "tipo_vaga": "Temporária",
-      "jornada_trabalho": null,
-      "salario": "R$ 1.870,00 a R$ 2.870,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-promotor-dermocosmeticos-em-distrito-federal__12235488.aspx",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Assistente De PCP I",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Santa Maria",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 2.880,00 a R$ 2.900,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-assistente-pcp-i-em-distrito-federal__12235166.aspx",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Analista De PCP Jr",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Guará, SIA",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 2.071,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-analista-pcp-jr-em-distrito-federal__12235161.aspx",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Analista Administrativo Junior",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 2.500,00 a R$ 2.800,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-analista-administrativo-junior-em-distrito-federal__12234999.aspx",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
-    },
-    {
-      "tipo": "Estágio",
-      "titulo": "Vaga: OPERADOR DE LOJA |BRASILIA - SHOPPING BOULEVARD- 45 DIAS",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Asa Norte, Asa Sul",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 1.700,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-operador-loja-brasilia-shopping-boulevard-45-dias-em-distrito-federal__12234688.aspx",
-      "adicionado_em": "2026-11-19T17:47:36.869Z"
     }
   ],
   "expiradas": [
@@ -1623,6 +1413,66 @@
     {
       "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12234688",
       "expirada_em": "2026-11-22T14:59:37.349Z"
+    },
+    {
+      "url": "https://www.empregare.com/pt-br/vaga-consultor-a-de-viagem-senior-bilingue-pl_189663",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.empregare.com/pt-br/vaga-estagio-em-engenharia-eletrica-engenhari_189659",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.empregare.com/pt-br/vaga-estagio-em-engenharia-civil_189655",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.empregare.com/pt-br/vaga-analista-de-faturamento-df_189609",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.empregare.com/pt-br/vaga-auxiliar-operacional_189588",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-auxiliar-limpeza-petz-brasilia-asa-norte-em-distrito-federal__12236198.aspx",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-assistente-loja-parkshopping-em-distrito-federal__12236027.aspx",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12236027",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-professor-musculacao-unidade-paranoa-brasiliadf-em-distrito-federal__12235925.aspx",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-gerente-unidade-operacional-i-uan-em-distrito-federal__12235715.aspx",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-promotor-dermocosmeticos-em-distrito-federal__12235488.aspx",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-assistente-pcp-i-em-distrito-federal__12235166.aspx",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-analista-pcp-jr-em-distrito-federal__12235161.aspx",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-analista-administrativo-junior-em-distrito-federal__12234999.aspx",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-operador-loja-brasilia-shopping-boulevard-45-dias-em-distrito-federal__12234688.aspx",
+      "expirada_em": "2026-11-22T21:07:19.675Z"
     }
   ]
 }
