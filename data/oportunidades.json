@@ -1,6 +1,6 @@
 {
   "versao_estrutura": 4,
-  "atualizado_em": "2026-11-22T21:07:19.418Z",
+  "atualizado_em": "2026-11-23T01:45:30.992Z",
   "items": [
     {
       "tipo": "Vaga de emprego",
@@ -87,7 +87,7 @@
       "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
       "jornada_trabalho": null,
       "salario": "R$1.000",
-      "publicado_em": "2026-11-22",
+      "publicado_em": "2026-11-23",
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12238358",
       "adicionado_em": "2026-11-20T07:15:46.536Z"
@@ -102,7 +102,7 @@
       "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
       "jornada_trabalho": null,
       "salario": "R$1.000",
-      "publicado_em": "2026-11-22",
+      "publicado_em": "2026-11-23",
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12236992",
       "adicionado_em": "2026-11-20T07:15:46.536Z"
@@ -121,276 +121,6 @@
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vaga-de-mauro-menezes-advogados-assistente-marketing-em-distrito-federal__12238462.aspx",
       "adicionado_em": "2026-11-20T07:15:46.536Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-22",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12237345",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-22",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12237262",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga Auxiliar de Serviços Gerais (12x36) na Condomínio Kubitschek | EMPREGARE.com",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": "CLT",
-      "jornada_trabalho": null,
-      "salario": "R$ 1.792,07",
-      "publicado_em": "2026-11-19",
-      "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-auxiliar-de-servicos-gerais-12x36-condom_189772",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga Garçom na CSC PO - CENTRAL DE SERVICOS COMPARTILHADOS LTDA | EMPREGARE.com",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Taguatinga",
-      "atividades": null,
-      "tipo_vaga": "CLT",
-      "jornada_trabalho": null,
-      "salario": "R$ 1.750,68",
-      "publicado_em": "2026-11-19",
-      "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-garcom-brasilia-palace_189771",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Estágio",
-      "titulo": "Vaga Estágio em Relacionamento com o Mercado e Inovação na EMBRAPII | EMPREGARE.com",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": null,
-      "publicado_em": "2026-11-19",
-      "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-estagio-em-relacionamento-com-o-mercado-_189695",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga PROMOTOR DE TRADE MARKETING na CAJOTA SERVICOS E NEGOCIOS | EMPREGARE.com",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": "CLT",
-      "jornada_trabalho": null,
-      "salario": "R$ 2.190",
-      "publicado_em": "2026-11-19",
-      "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-promotor-de-trade-marketing_189734",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga Executivo Comercial na Soma Desenvolvimento Humano | EMPREGARE.com",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": "CLT",
-      "jornada_trabalho": null,
-      "salario": "R$ 3.500",
-      "publicado_em": "2026-11-19",
-      "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-executivo-comercial_189685",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: FEIRAÇÃO DE CONTRATAÇÃO SUPERMERCADO COMPER -AUX DE DEPOSITO E REPOSITOR",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Águas Claras, Sobradinho, Ceilândia, Asa Sul",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": "07h",
-      "salario": null,
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-feiracao-contratacao-supermercado-comper-aux-deposito-repositor-em-distrito-federal__12238129.aspx",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: GERENTE COMERCIAL - MERCADO IMOBILIÁRIO",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 10.000,00 a R$ 20.000,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-gerente-comercial-mercado-imobiliario-em-distrito-federal__12237618.aspx",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Reposição Merchandising - Brasília/DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 1.700,00 a R$ 2.000,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-reposicao-merchandising-brasiliadf-em-distrito-federal__12237401.aspx",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vaga: Auxiliar De Serviços Gerais",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 1.142,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-auxiliar-servicos-gerais-em-distrito-federal__12237345.aspx",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Estágio",
-      "titulo": "Vaga: Atendente De Loja (Farmácia) - Noroeste",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Asa Norte, SIA",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": "10h",
-      "salario": "R$ 1.838,00 a R$ 3.000,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-atendente-loja-farmacia-noroeste-em-distrito-federal__12237262.aspx",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: RECEPCIONISTA EXECUTIVA",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": "CLT",
-      "jornada_trabalho": "7h",
-      "salario": "R$ 3.000,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-recepcionista-executiva-em-distrito-federal__12237067.aspx",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Fisioterapeuta - Ou Cursando",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": "Temporária",
-      "jornada_trabalho": null,
-      "salario": "R$ 1.500,00 a R$ 2.500,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-fisioterapeuta-cursando-em-distrito-federal__12236994.aspx",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: ATENDENTE DE RESTAURANTE - TERRAÇO SHOPPING",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Asa Norte, Asa Sul",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 1.639,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-atendente-restaurante-terraco-shopping-em-distrito-federal__12236992.aspx",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Auxiliar De Contas A Receber - COBRANÇA",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": "Temporária / Efetiva",
-      "jornada_trabalho": null,
-      "salario": "R$ 2.600,00 a R$ 3.200,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-auxiliar-contas-receber-cobranca-em-distrito-federal__12236744.aspx",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Sushiman",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": "CLT",
-      "jornada_trabalho": null,
-      "salario": "R$ 3.000,00 a R$ 3.300,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-sushiman-em-distrito-federal__12236347.aspx",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga: Atendente- Petz Brasília Jardim Botânico",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Jardim Botânico, Asa Norte, Lago Sul",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": null,
-      "salario": "R$ 1.700,00",
-      "publicado_em": "2026-11-19",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vaga-de-atendente-petz-brasilia-jardim-botanico-em-distrito-federal__12236337.aspx",
-      "adicionado_em": "2026-11-19T23:55:03.473Z"
     }
   ],
   "expiradas": [
@@ -1473,6 +1203,78 @@
     {
       "url": "https://www.infojobs.com.br/vaga-de-operador-loja-brasilia-shopping-boulevard-45-dias-em-distrito-federal__12234688.aspx",
       "expirada_em": "2026-11-22T21:07:19.675Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12237345",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12237262",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.empregare.com/pt-br/vaga-auxiliar-de-servicos-gerais-12x36-condom_189772",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.empregare.com/pt-br/vaga-garcom-brasilia-palace_189771",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.empregare.com/pt-br/vaga-estagio-em-relacionamento-com-o-mercado-_189695",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.empregare.com/pt-br/vaga-promotor-de-trade-marketing_189734",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.empregare.com/pt-br/vaga-executivo-comercial_189685",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-feiracao-contratacao-supermercado-comper-aux-deposito-repositor-em-distrito-federal__12238129.aspx",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-gerente-comercial-mercado-imobiliario-em-distrito-federal__12237618.aspx",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-reposicao-merchandising-brasiliadf-em-distrito-federal__12237401.aspx",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-auxiliar-servicos-gerais-em-distrito-federal__12237345.aspx",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-atendente-loja-farmacia-noroeste-em-distrito-federal__12237262.aspx",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-recepcionista-executiva-em-distrito-federal__12237067.aspx",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-fisioterapeuta-cursando-em-distrito-federal__12236994.aspx",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-atendente-restaurante-terraco-shopping-em-distrito-federal__12236992.aspx",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-auxiliar-contas-receber-cobranca-em-distrito-federal__12236744.aspx",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-sushiman-em-distrito-federal__12236347.aspx",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vaga-de-atendente-petz-brasilia-jardim-botanico-em-distrito-federal__12236337.aspx",
+      "expirada_em": "2026-11-23T01:45:31.202Z"
     }
   ]
 }
