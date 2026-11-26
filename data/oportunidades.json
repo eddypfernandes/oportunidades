@@ -1,7 +1,82 @@
 {
   "versao_estrutura": 4,
-  "atualizado_em": "2026-11-26T02:55:45.754Z",
+  "atualizado_em": "2026-11-26T12:32:23.125Z",
   "items": [
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga Especialista em Eventos Corporativos na ANADEM | EMPREGARE.com",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Brasília/DF",
+      "atividades": null,
+      "tipo_vaga": "Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": null,
+      "publicado_em": "2026-11-26",
+      "fonte": "Empregare — Brasília/DF",
+      "link_original": "https://www.empregare.com/pt-br/vaga-especialista-em-eventos-corporativos_190434",
+      "adicionado_em": "2026-11-26T12:32:23.125Z"
+    },
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga: Promotor De Vendas - Brasília/DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Sudoeste",
+      "atividades": null,
+      "tipo_vaga": null,
+      "jornada_trabalho": null,
+      "salario": "R$ 1.626,00",
+      "publicado_em": "2026-11-26",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vaga-de-promotor-vendas-brasiliadf-em-distrito-federal__12253654.aspx",
+      "adicionado_em": "2026-11-26T12:32:23.125Z"
+    },
+    {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-26",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12253654",
+      "adicionado_em": "2026-11-26T12:32:23.125Z"
+    },
+    {
+      "tipo": "Estágio",
+      "titulo": "Vaga: Técnico De Enfermagem - Endoscopia - Asa Sul/Brasília",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Lago Sul, Asa Sul",
+      "atividades": null,
+      "tipo_vaga": null,
+      "jornada_trabalho": "6 horas ",
+      "salario": "R$ 800,00",
+      "publicado_em": "2026-11-26",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vaga-de-tecnico-enfermagem-endoscopia-asa-sulbrasilia-em-distrito-federal__12253575.aspx",
+      "adicionado_em": "2026-11-26T12:32:23.125Z"
+    },
+    {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-26",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12253575",
+      "adicionado_em": "2026-11-26T12:32:23.125Z"
+    },
     {
       "tipo": "Jovem aprendiz",
       "titulo": "Vagas de Emprego em Brasília - DF",
@@ -75,6 +150,21 @@
       "publicado_em": "2026-11-26",
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse11911624",
+      "adicionado_em": "2026-11-25T20:02:05.959Z"
+    },
+    {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-26",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12251764",
       "adicionado_em": "2026-11-25T20:02:05.959Z"
     },
     {
@@ -210,21 +300,6 @@
       "publicado_em": "2026-11-25",
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vaga-de-porteiro-em-distrito-federal__12251764.aspx",
-      "adicionado_em": "2026-11-25T20:02:05.959Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-25",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12251764",
       "adicionado_em": "2026-11-25T20:02:05.959Z"
     },
     {
@@ -526,81 +601,6 @@
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12247813",
       "adicionado_em": "2026-11-25T01:10:59.949Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-25",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12247936",
-      "adicionado_em": "2026-11-25T01:10:59.949Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-25",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12132473",
-      "adicionado_em": "2026-11-25T01:10:59.949Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-25",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12245758",
-      "adicionado_em": "2026-11-24T16:31:07.929Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-25",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12245506",
-      "adicionado_em": "2026-11-24T16:31:07.929Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Programa Castra DF abre 935 vagas para castração de cães e gatos nesta quarta (25) e na quinta (26)",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Ceilândia",
-      "atividades": null,
-      "tipo_vaga": null,
-      "jornada_trabalho": "9h ",
-      "salario": null,
-      "publicado_em": "2026-11-24",
-      "fonte": "Agência Brasília",
-      "link_original": "https://agenciabrasilia.df.gov.br/w/castra-df-abre-935-vagas-para-castracao-de-caes-e-gatos-nesta-quarta-25-e-na-quinta-26-",
-      "adicionado_em": "2026-11-24T16:31:07.929Z"
     }
   ],
   "expiradas": [
@@ -1963,6 +1963,26 @@
     {
       "url": "https://www.empregare.com/pt-br/vaga-operador-a-de-caixa_190099",
       "expirada_em": "2026-11-26T02:55:46.068Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12247936",
+      "expirada_em": "2026-11-26T12:32:23.453Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12132473",
+      "expirada_em": "2026-11-26T12:32:23.453Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12245758",
+      "expirada_em": "2026-11-26T12:32:23.453Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12245506",
+      "expirada_em": "2026-11-26T12:32:23.453Z"
+    },
+    {
+      "url": "https://agenciabrasilia.df.gov.br/w/castra-df-abre-935-vagas-para-castracao-de-caes-e-gatos-nesta-quarta-25-e-na-quinta-26-",
+      "expirada_em": "2026-11-26T12:32:23.453Z"
     }
   ]
 }
