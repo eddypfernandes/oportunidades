@@ -1,13 +1,133 @@
 {
   "versao_estrutura": 4,
-  "atualizado_em": "2026-11-27T04:19:28.215Z",
+  "atualizado_em": "2026-11-27T13:57:17.967Z",
   "items": [
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga Auxiliar de cozinha na Clima Gestão | EMPREGARE.com",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Brasília/DF",
+      "atividades": null,
+      "tipo_vaga": "CLT",
+      "jornada_trabalho": null,
+      "salario": "R$ 2.000",
+      "publicado_em": "2026-11-27",
+      "fonte": "Empregare — Brasília/DF",
+      "link_original": "https://www.empregare.com/pt-br/vaga-auxiliar-de-cozinha_190573",
+      "adicionado_em": "2026-11-27T13:57:17.967Z"
+    },
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga Analista Administrativo na SICOOB NOVA CENTRAL | EMPREGARE.com",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Taguatinga",
+      "atividades": null,
+      "tipo_vaga": "CLT",
+      "jornada_trabalho": null,
+      "salario": null,
+      "publicado_em": "2026-11-27",
+      "fonte": "Empregare — Brasília/DF",
+      "link_original": "https://www.empregare.com/pt-br/vaga-analista-administrativo_190570",
+      "adicionado_em": "2026-11-27T13:57:17.967Z"
+    },
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga Auxiliar de Jardinagem na B2B FACILITIES | EMPREGARE.com",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Taguatinga",
+      "atividades": null,
+      "tipo_vaga": "CLT",
+      "jornada_trabalho": null,
+      "salario": "R$ 1.862,09",
+      "publicado_em": "2026-11-27",
+      "fonte": "Empregare — Brasília/DF",
+      "link_original": "https://www.empregare.com/pt-br/vaga-auxiliar-de-jardinagem_190562",
+      "adicionado_em": "2026-11-27T13:57:17.967Z"
+    },
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga Técnico de Segurança do Trabalho na Artec | EMPREGARE.com",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Taguatinga",
+      "atividades": null,
+      "tipo_vaga": "CLT",
+      "jornada_trabalho": null,
+      "salario": "R$ 2.963,45",
+      "publicado_em": "2026-11-27",
+      "fonte": "Empregare — Brasília/DF",
+      "link_original": "https://www.empregare.com/pt-br/vaga-tecnico-de-seguranca-do-trabalho_190559",
+      "adicionado_em": "2026-11-27T13:57:17.967Z"
+    },
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga: Pessoa Executiva De Vendas SPIN SR",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Asa Sul",
+      "atividades": null,
+      "tipo_vaga": null,
+      "jornada_trabalho": null,
+      "salario": "R$ 3.500,00 a R$ 4.500,00",
+      "publicado_em": "2026-11-27",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vaga-de-pessoa-executiva-vendas-spin-sr-em-distrito-federal__12257782.aspx",
+      "adicionado_em": "2026-11-27T13:57:17.967Z"
+    },
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga: Promotor Dermocosméticos (Farmácia)",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Plano Piloto, Lago Norte, Planaltina",
+      "atividades": null,
+      "tipo_vaga": null,
+      "jornada_trabalho": null,
+      "salario": "R$ 1.600,00 a R$ 1.800,00",
+      "publicado_em": "2026-11-27",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vaga-de-promotor-dermocosmeticos-farmacia-em-distrito-federal__12257730.aspx",
+      "adicionado_em": "2026-11-27T13:57:17.967Z"
+    },
+    {
+      "tipo": "Vaga de emprego",
+      "titulo": "Vaga: Vendedor Externo",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Brasília/DF",
+      "atividades": null,
+      "tipo_vaga": null,
+      "jornada_trabalho": null,
+      "salario": "R$ 1.800,00 a R$ 2.500,00",
+      "publicado_em": "2026-11-27",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vaga-de-vendedor-externo-em-distrito-federal__12257660.aspx",
+      "adicionado_em": "2026-11-27T13:57:17.967Z"
+    },
     {
       "tipo": "Jovem aprendiz",
       "titulo": "Vagas de Emprego em Brasília - DF",
       "cidade": "Brasília",
       "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "atividades": null,
+      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
+      "jornada_trabalho": null,
+      "salario": "R$1.000",
+      "publicado_em": "2026-11-27",
+      "fonte": "InfoJobs — Brasília/DF",
+      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12257660",
+      "adicionado_em": "2026-11-27T13:57:17.967Z"
+    },
+    {
+      "tipo": "Jovem aprendiz",
+      "titulo": "Vagas de Emprego em Brasília - DF",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
       "atividades": null,
       "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
       "jornada_trabalho": null,
@@ -52,7 +172,7 @@
       "titulo": "Vagas de Emprego em Brasília - DF",
       "cidade": "Brasília",
       "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
       "atividades": null,
       "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
       "jornada_trabalho": null,
@@ -67,7 +187,7 @@
       "titulo": "Vagas de Emprego em Brasília - DF",
       "cidade": "Brasília",
       "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
       "atividades": null,
       "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
       "jornada_trabalho": null,
@@ -82,7 +202,7 @@
       "titulo": "Vagas de Emprego em Brasília - DF",
       "cidade": "Brasília",
       "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
+      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
       "atividades": null,
       "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
       "jornada_trabalho": null,
@@ -481,126 +601,6 @@
       "fonte": "InfoJobs — Brasília/DF",
       "link_original": "https://www.infojobs.com.br/vaga-de-tecnico-enfermagem-endoscopia-asa-sulbrasilia-em-distrito-federal__12253575.aspx",
       "adicionado_em": "2026-11-26T12:32:23.125Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-26",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12253575",
-      "adicionado_em": "2026-11-26T12:32:23.125Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-26",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12251769",
-      "adicionado_em": "2026-11-26T02:55:45.754Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-26",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12252515",
-      "adicionado_em": "2026-11-25T20:02:05.959Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-26",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12252389",
-      "adicionado_em": "2026-11-25T20:02:05.959Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-26",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12251744",
-      "adicionado_em": "2026-11-25T20:02:05.959Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-26",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse11911624",
-      "adicionado_em": "2026-11-25T20:02:05.959Z"
-    },
-    {
-      "tipo": "Jovem aprendiz",
-      "titulo": "Vagas de Emprego em Brasília - DF",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Núcleo Bandeirante, Recanto das Emas, Candangolândia, Candangolândia, São Sebastião, Riacho Fundo, Santa Maria, Lago Norte, Taguatinga, Brazlândia, Planaltina, Sobradinho, Samambaia, Ceilândia, Lago Sul, Cruzeiro, Guará, Gama",
-      "atividades": null,
-      "tipo_vaga": "CLT / Temporária / Efetiva / Pessoa jurídica (PJ)",
-      "jornada_trabalho": null,
-      "salario": "R$1.000",
-      "publicado_em": "2026-11-26",
-      "fonte": "InfoJobs — Brasília/DF",
-      "link_original": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12251764",
-      "adicionado_em": "2026-11-25T20:02:05.959Z"
-    },
-    {
-      "tipo": "Vaga de emprego",
-      "titulo": "Vaga Analista de Internacionalização na IDP | EMPREGARE.com",
-      "cidade": "Brasília",
-      "uf": "DF",
-      "localidade": "Brasília/DF",
-      "atividades": null,
-      "tipo_vaga": "CLT",
-      "jornada_trabalho": null,
-      "salario": null,
-      "publicado_em": "2026-11-25",
-      "fonte": "Empregare — Brasília/DF",
-      "link_original": "https://www.empregare.com/pt-br/vaga-analista-de-internacionalizacao_190404",
-      "adicionado_em": "2026-11-25T20:02:05.959Z"
     }
   ],
   "expiradas": [
@@ -2095,6 +2095,38 @@
     {
       "url": "https://www.empregare.com/pt-br/vaga-professsor-de-academia-salao-fitness-asa_190277",
       "expirada_em": "2026-11-27T04:19:28.517Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12253575",
+      "expirada_em": "2026-11-27T13:57:18.253Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12251769",
+      "expirada_em": "2026-11-27T13:57:18.253Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12252515",
+      "expirada_em": "2026-11-27T13:57:18.253Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12252389",
+      "expirada_em": "2026-11-27T13:57:18.253Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12251744",
+      "expirada_em": "2026-11-27T13:57:18.253Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse11911624",
+      "expirada_em": "2026-11-27T13:57:18.253Z"
+    },
+    {
+      "url": "https://www.infojobs.com.br/vagas-g-p-em-brasilia%2C-df.aspx#collapse12251764",
+      "expirada_em": "2026-11-27T13:57:18.253Z"
+    },
+    {
+      "url": "https://www.empregare.com/pt-br/vaga-analista-de-internacionalizacao_190404",
+      "expirada_em": "2026-11-27T13:57:18.253Z"
     }
   ]
 }
